@@ -137,12 +137,12 @@ function page() {
           transition={{ duration: 0.6 }}
         >
           <div className="">
-            <Image
+            <img
               src="/logo2.png"
               alt="Logo"
               width={100}
-              height={10}
-              className="w-40 h-12 lg:w-50 p-3 lg:h-16 "
+              height={40}
+              className="w-40 h-12 lg:w-50 p-3 lg:h-16"
             />
           </div>
 
