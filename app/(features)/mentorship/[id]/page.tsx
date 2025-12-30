@@ -94,7 +94,7 @@ export default function MentorDetailPage() {
       <div className="bg-black border-b border-gray-800 px-6 py-4 sticky top-0 z-30">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Image
-            src="/logo2.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
             alt="MockRound.AI Logo"
             width={120}
             height={40}
@@ -115,11 +115,11 @@ export default function MentorDetailPage() {
           <div className="lg:col-span-1">
             <div className=" border border-gray-700 rounded-lg p-6 mb-6">
               <img
-                src={mentor.profileImage || '/logo2.png'}
+                src={mentor.profileImage || 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png'}
                 alt={mentor.name}
                 className="w-40 h-40 rounded-full mx-auto mb-2"
                 onError={(e) => {
-                  e.currentTarget.src = '/logo2.png';
+                  e.currentTarget.src = 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png';
                 }}
               />
               <div className="text-center mb-4">

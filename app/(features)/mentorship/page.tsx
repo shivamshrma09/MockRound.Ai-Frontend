@@ -24,7 +24,7 @@ function Navbar() {
         <div className='flex items-center ml-4 sm:ml-19 md:ml-65 mt-[-50px]'>
           <Link href='/home'>
             <Image
-              src="/logo2.png"
+              src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
               alt="MockRound.AI Logo"
               width={125}
               height={37}

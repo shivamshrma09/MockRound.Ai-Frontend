@@ -207,7 +207,7 @@ function MCQRound() {
   };
 
   const currentQuestion = localQuestionsList[currentQuestionIndex] || {};
-  const randomImage = '/logo.png';
+  const randomImage = 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo.png';
 
   if (loading) {
     return (

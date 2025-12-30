@@ -2,7 +2,7 @@ const moreGoogleCards = [
   {
     id: 12,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "System Design",
     questions: 2,
     duration: "45 min",
@@ -68,7 +68,7 @@ const moreGoogleCards = [
   {
     id: 13,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Technical MCQ",
     questions: 25,
     duration: "45 min",
@@ -152,7 +152,7 @@ const moreGoogleCards = [
   {
     id: 14,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Behavioral Round",
     questions: 8,
     duration: "60 min",
@@ -251,7 +251,7 @@ const moreGoogleCards = [
   {
     id: 15,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Coding Round",
     questions: 2,
     duration: "75 min",

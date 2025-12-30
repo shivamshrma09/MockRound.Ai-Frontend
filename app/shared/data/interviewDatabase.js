@@ -2,7 +2,7 @@ export const interviewDatabase = [
   {
     id: 5,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -68,7 +68,7 @@ export const interviewDatabase = [
   {
     id: 11,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -99,7 +99,7 @@ export const interviewDatabase = [
   {
     id: 12,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "System Design",
     questions: 2,
     duration: "45 min",
@@ -122,7 +122,7 @@ export const interviewDatabase = [
   {
     id: 13,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Technical MCQ",
     questions: 25,
     duration: "45 min",
@@ -145,7 +145,7 @@ export const interviewDatabase = [
   {
     id: 100,
     companyName: "Computer Fundamentals",
-    logoSrc: "/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -174,7 +174,7 @@ export const interviewDatabase = [
   {
     id: 101,
     companyName: "Computer Fundamentals",
-    logoSrc: "/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -203,7 +203,7 @@ export const interviewDatabase = [
   {
     id: 102,
     companyName: "Computer Fundamentals",
-    logoSrc: "/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -232,7 +232,7 @@ export const interviewDatabase = [
   {
     id: 103,
     companyName: "Computer Fundamentals",
-    logoSrc: "/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -261,7 +261,7 @@ export const interviewDatabase = [
   {
     id: 104,
     companyName: "Computer Fundamentals",
-    logoSrc: "/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -289,7 +289,7 @@ export const interviewDatabase = [
   {
     id: 14,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Behavioral Round",
     questions: 8,
     duration: "60 min",
@@ -311,7 +311,7 @@ export const interviewDatabase = [
   {
     id: 15,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Coding Round",
     questions: 2,
     duration: "75 min",
@@ -342,7 +342,7 @@ export const interviewDatabase = [
   {
     id: 16,
     companyName: "Meta",
-    logoSrc: "/meta.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -373,7 +373,7 @@ export const interviewDatabase = [
   {
     id: 17,
     companyName: "Meta",
-    logoSrc: "/meta.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -404,7 +404,7 @@ export const interviewDatabase = [
   {
     id: 18,
     companyName: "Meta",
-    logoSrc: "/meta.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
     roundType: "Coding Round",
     questions: 2,
     duration: "75 min",
@@ -435,7 +435,7 @@ export const interviewDatabase = [
   {
     id: 19,
     companyName: "Meta",
-    logoSrc: "/meta.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -466,7 +466,7 @@ export const interviewDatabase = [
   {
     id: 20,
     companyName: "Meta",
-    logoSrc: "/meta.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -497,7 +497,7 @@ export const interviewDatabase = [
   {
     id: 21,
     companyName: "Meta",
-    logoSrc: "/meta.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -528,7 +528,7 @@ export const interviewDatabase = [
   {
     id: 22,
     companyName: "Apple",
-    logoSrc: "/apple.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/apple.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -559,7 +559,7 @@ export const interviewDatabase = [
   {
     id: 23,
     companyName: "Apple",
-    logoSrc: "/apple.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/apple.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -590,7 +590,7 @@ export const interviewDatabase = [
   {
     id: 24,
     companyName: "Apple",
-    logoSrc: "/apple.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/apple.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -621,7 +621,7 @@ export const interviewDatabase = [
   {
     id: 25,
     companyName: "Apple",
-    logoSrc: "/apple.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/apple.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -652,7 +652,7 @@ export const interviewDatabase = [
   {
     id: 26,
     companyName: "Apple",
-    logoSrc: "/apple.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/apple.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -683,7 +683,7 @@ export const interviewDatabase = [
   {
     id: 27,
     companyName: "Apple",
-    logoSrc: "/apple.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/apple.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -714,7 +714,7 @@ export const interviewDatabase = [
   {
     id: 28,
     companyName: "Uber",
-    logoSrc: "/uber.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -779,7 +779,7 @@ export const interviewDatabase = [
   {
     id: 29,
     companyName: "Uber",
-    logoSrc: "/uber.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -844,7 +844,7 @@ export const interviewDatabase = [
   {
     id: 30,
     companyName: "Uber",
-    logoSrc: "/uber.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -911,7 +911,7 @@ export const interviewDatabase = [
   {
     id: 31,
     companyName: "Uber",
-    logoSrc: "/uber.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -977,7 +977,7 @@ export const interviewDatabase = [
   {
     id: 32,
     companyName: "Uber",
-    logoSrc: "/uber.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -1043,7 +1043,7 @@ export const interviewDatabase = [
   {
     id: 33,
     companyName: "Uber",
-    logoSrc: "/uber.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -1109,7 +1109,7 @@ export const interviewDatabase = [
   {
     id: 34,
     companyName: "Flipkart",
-    logoSrc: "/flipkart.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/flipkart.png",
     roundType: "Coding Round",
     questions: 7,
     duration: "120 min",
@@ -1225,7 +1225,7 @@ export const interviewDatabase = [
   {
     id: 35,
     companyName: "flipkart",
-    logoSrc: "/flipkart.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/flipkart.png",
     roundType: "Coding Round",
     questions: 4,
     duration: "120 min",
@@ -1324,7 +1324,7 @@ export const interviewDatabase = [
   {
     id: 36,
     companyName: "Amazon",
-    logoSrc: "/amazon.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/amazone.png",
     roundType: "Coding Round",
     questions: 4,
     duration: "90 min",
@@ -1406,7 +1406,7 @@ export const interviewDatabase = [
   {
     id: 105,
     companyName: "DBMS - Part 1",
-    logoSrc: "/dbms.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/dbms.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1435,7 +1435,7 @@ export const interviewDatabase = [
   {
     id: 106,
     companyName: "DBMS - Part 2",
-    logoSrc: "/dbms.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/dbms.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1464,7 +1464,7 @@ export const interviewDatabase = [
   {
     id: 107,
     companyName: "DBMS - Part 3",
-    logoSrc: "/dbms.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/dbms.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1493,7 +1493,7 @@ export const interviewDatabase = [
   {
     id: 108,
     companyName: "DBMS - Part 4",
-    logoSrc: "/dbms.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/dbms.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1522,7 +1522,7 @@ export const interviewDatabase = [
   {
     id: 109,
     companyName: "DBMS - Part 5",
-    logoSrc: "/dbms.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/dbms.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1551,7 +1551,7 @@ export const interviewDatabase = [
   {
     id: 110,
     companyName: "DBMS - Part 6",
-    logoSrc: "/dbms.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/dbms.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1579,7 +1579,7 @@ export const interviewDatabase = [
   {
     id: 111,
     companyName: "OOP - Part 1",
-    logoSrc: "/oop.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/oop.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1608,7 +1608,7 @@ export const interviewDatabase = [
   {
     id: 112,
     companyName: "OOP - Part 2",
-    logoSrc: "/oop.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/oop.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1637,7 +1637,7 @@ export const interviewDatabase = [
   {
     id: 113,
     companyName: "OOP - Part 3",
-    logoSrc: "/oop.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/oop.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1666,7 +1666,7 @@ export const interviewDatabase = [
   {
     id: 114,
     companyName: "OOP - Part 4",
-    logoSrc: "/oop.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/oop.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1695,7 +1695,7 @@ export const interviewDatabase = [
   {
     id: 115,
     companyName: "OOP - Part 5",
-    logoSrc: "/oop.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/oop.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1724,7 +1724,7 @@ export const interviewDatabase = [
   {
     id: 116,
     companyName: "Computer Networks - Part 1",
-    logoSrc: "/networks.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/networks.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1753,7 +1753,7 @@ export const interviewDatabase = [
   {
     id: 117,
     companyName: "Computer Networks - Part 2",
-    logoSrc: "/networks.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/networks.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1782,7 +1782,7 @@ export const interviewDatabase = [
   {
     id: 118,
     companyName: "Computer Networks - Part 3",
-    logoSrc: "/networks.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/networks.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1811,7 +1811,7 @@ export const interviewDatabase = [
   {
     id: 119,
     companyName: "Computer Networks - Part 4",
-    logoSrc: "/networks.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/networks.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1840,7 +1840,7 @@ export const interviewDatabase = [
   {
     id: 120,
     companyName: "Computer Networks - Part 5",
-    logoSrc: "/networks.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/networks.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1869,7 +1869,7 @@ export const interviewDatabase = [
   {
     id: 121,
     companyName: "Operating Systems - Part 1",
-    logoSrc: "/operating-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1898,7 +1898,7 @@ export const interviewDatabase = [
   {
     id: 122,
     companyName: "Operating Systems - Part 2",
-    logoSrc: "/operating-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1927,7 +1927,7 @@ export const interviewDatabase = [
   {
     id: 123,
     companyName: "Operating Systems - Part 3",
-    logoSrc: "/operating-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1956,7 +1956,7 @@ export const interviewDatabase = [
   {
     id: 124,
     companyName: "Operating Systems - Part 4",
-    logoSrc: "/operating-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -1985,7 +1985,7 @@ export const interviewDatabase = [
   {
     id: 125,
     companyName: "Operating Systems - Part 5",
-    logoSrc: "/operating-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2014,7 +2014,7 @@ export const interviewDatabase = [
   {
     id: 126,
     companyName: "C Programming - Part 1",
-    logoSrc: "/c.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/c.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2043,7 +2043,7 @@ export const interviewDatabase = [
   {
     id: 127,
     companyName: "C Programming - Part 2",
-    logoSrc: "/c.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/c.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2072,7 +2072,7 @@ export const interviewDatabase = [
   {
     id: 128,
     companyName: "C Programming - Part 3",
-    logoSrc: "/c.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/c.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2101,7 +2101,7 @@ export const interviewDatabase = [
   {
     id: 129,
     companyName: "C++ - Part 1",
-    logoSrc: "/cpp.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/cpp.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2130,7 +2130,7 @@ export const interviewDatabase = [
   {
     id: 130,
     companyName: "C++ - Part 2",
-    logoSrc: "/cpp.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/cpp.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2159,7 +2159,7 @@ export const interviewDatabase = [
   {
     id: 131,
     companyName: "C++ - Part 3",
-    logoSrc: "/cpp.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/cpp.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2188,7 +2188,7 @@ export const interviewDatabase = [
   {
     id: 38,
     companyName: "Computer Fundamentals - Part 2",
-    logoSrc: "/number-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2312,7 +2312,7 @@ export const interviewDatabase = [
   {
     id: 39,
     companyName: "Computer Fundamentals - Part 3",
-    logoSrc: "/operating-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2471,7 +2471,7 @@ export const interviewDatabase = [
   {
     id: 40,
     companyName: "Computer Fundamentals - Part 4",
-    logoSrc: "/networks.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/networks.png",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",

@@ -9,7 +9,7 @@ function Navbar() {
                 <div className='w-50 h-10 md:ml-60 relative'>
                   <Link href='/home' >
                     <Image
-                      src="/logo.png"
+                      src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo.png"
                       alt="Logo"
                       width={200}
                       height={40}

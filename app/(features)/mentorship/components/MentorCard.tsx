@@ -58,11 +58,11 @@ export default function MentorCard({ mentor }: MentorCardProps) {
     <div className="w-full max-w-sm mx-auto p-2 bg-black rounded-lg border border-[#1d1b1b] hover:border-[#555] flex flex-col">
       <div className="mb-4">
         <img
-          src={mentor.profileImage || '/logo2.png'}
+          src={mentor.profileImage || 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png'}
           alt={mentor.name}
           className="w-full h-40 sm:h-45 rounded-lg object-cover"
           onError={(e) => {
-            e.currentTarget.src = '/logo2.png';
+            e.currentTarget.src = 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png';
           }}
         />
       </div>

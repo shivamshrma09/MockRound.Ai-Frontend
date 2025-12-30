@@ -2,7 +2,7 @@ const googleCards = [
   {
     id: 5,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",
@@ -98,7 +98,7 @@ const googleCards = [
   {
     id: 11,
     companyName: "Google",
-    logoSrc: "/google.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
     roundType: "Coding Round",
     questions: 3,
     duration: "90 min",

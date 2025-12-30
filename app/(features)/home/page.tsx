@@ -80,7 +80,7 @@ function HomePage() {
 
             <Link href='/home'>
               <Image
-                src="/logo2.png"
+                src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
                 alt="MockRound.AI Logo"
                 width={100}
                 height={40}
@@ -145,7 +145,7 @@ function HomePage() {
                     }}
                   >
                     <Image 
-                      src='/promotion.png' 
+                      src='https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/promotion.png' 
                       alt='Promotion' 
                       width={300} 
                       height={200} 
@@ -189,7 +189,7 @@ function HomePage() {
                 }}
               >
                 <Image 
-                  src='/promotion.png' 
+                  src='https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/promotion.png' 
                   alt='Promotion' 
                   width={240} 
                   height={300} 

@@ -33,7 +33,7 @@ function Navbar() {
         <div className="flex items-center ml-4 sm:ml-19 md:ml-65 mt-[-20px]">
           <Link href="/home">
             <Image
-              src="/logo2.png"
+              src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
               alt="MockRound.AI Logo"
               width={150}
               height={10}
@@ -274,7 +274,7 @@ function page() {
                          setstepnumber(2);
                        }}>
                     <Image
-                      src="/coding.png"
+                      src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/coding.png"
                       alt="Coding Round"
                       width={300}
                       height={200}
@@ -294,7 +294,7 @@ function page() {
                          setstepnumber(2);
                        }}>
                     <Image
-                      src="/technicalMCQ.png"
+                      src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/technicalMCQ.png"
                       alt="MCQ Round"
                       width={300}
                       height={200}
@@ -313,7 +313,7 @@ function page() {
                          setstepnumber(2);
                        }}>
                     <Image
-                      src="/techncial.png"
+                      src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/techncial.png"
                       alt="Technical Round"
                       width={300}
                       height={200}
@@ -332,7 +332,7 @@ function page() {
                          setstepnumber(2);
                        }}>
                     <Image
-                      src="/hrr.png"
+                      src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/hrr.png"
                       alt="HR Round"
                       width={300}
                       height={200}

@@ -65,7 +65,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader className="bg-black">
         <div className="flex items-center justify-center px-4 py-2">
           <Image
-            src="/logo2.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
             alt="MockRound.AI Logo"
             width={120}
             height={40}

@@ -299,7 +299,7 @@ function Page({ questionsList, onBack, testdetails }) {
     questions_numbers: Array.from({length: questionsList?.length || 12}, (_, i) => (i + 1).toString()),
     numberselected: (currentQuestionIndex + 1).toString(),
     iscode: currentQuestion.code ? true : false,
-    randomImage: './logo.png',
+    randomImage: 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo.png',
     question:  currentQuestion.question || "Loading question...",
     options: currentQuestion.options || [],
     code: currentQuestion.code || ""

@@ -381,7 +381,7 @@ return (
           <div className='w-full sm:w-1/2 h-1/2 sm:h-full border-b-2 sm:border-b-0 sm:border-r-2 border-gray-600'>
             <video 
               ref={interviewVideoRef}
-              src={isAISpeaking ? '/video1.mp4' : '/video2.mp4'}
+              src={isAISpeaking ? 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/video1.mp4' : 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/video1.mp4'}
               className='w-full h-full bg-black object-cover' 
               autoPlay 
               muted 
@@ -463,7 +463,7 @@ return (
       ) : (
         <div className='w-full h-full'>
           <video 
-            src={isAISpeaking ? '/video1.mp4' : '/video2.mp4'}
+            src={isAISpeaking ? 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/video1.mp4' : 'https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/video1.mp4'}
             className='w-full h-full bg-black object-cover' 
             autoPlay 
             muted 

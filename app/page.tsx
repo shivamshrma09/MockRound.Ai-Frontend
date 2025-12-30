@@ -137,12 +137,12 @@ function page() {
           transition={{ duration: 0.6 }}
         >
           <div className="">
-            <img
-              src="/logo2.png"
+            <Image
+              src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
               alt="Logo"
               width={100}
-              height={40}
-              className="w-40 h-12 lg:w-50 p-3 lg:h-16"
+              height={10}
+              className="w-40 h-12 lg:w-50 p-3 lg:h-16 "
             />
           </div>
 
@@ -280,14 +280,14 @@ function page() {
 
             <div className="lg:mt-10 mt-[-8] z-10 w-full max-w-8xl mx-auto border-b  border-neutral-500 overflow-hidden">
                 <Image
-                  src="/monilebanner2.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/monilebanner2.png"
                   alt="home2"
                   width={2000}
                   height={1250}
                   className="w-full h-auto rounded-xl lg:hidden"
                 />
                 <Image
-                  src="/homebanner.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/homebanner.png"
                   alt="home1"
                   width={2000}
                   height={1250}
@@ -414,7 +414,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="/testetmpplet.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/testetmpplet.png"
                   alt="Home Dashboard"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -447,7 +447,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="/intevriewchallnages.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/intevriewchallnages.png"
                   alt="Coding Challenges"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -476,7 +476,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="/post.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/post.png"
                   alt="Discussion Forum"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -508,7 +508,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="/mentor.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/mentor.png"
                   alt="1:1 Mentor"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -537,7 +537,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="/aimock.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/aimock.png"
                   alt="Create Interview"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -787,119 +787,106 @@ function page() {
           />
         </div>
         <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white  font-bold">Shivam Sharma</h2>
+          <h2 className="text-white font-bold">Shivam Sharma</h2>
           <p className="text-neutral-500 text-sm">@Google SDE-2</p>
           <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Cracked Google SDE-2 after 3 months of consistent practice! all credit goes to  my techer mentor shivam kumar
+            Cracked Google SDE-2 after 3 months! AI mock interviews helped me practice real scenarios.
           </p>
         </div>
       </div>
 
-
-         
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white  font-bold">Shivam Sharma</h2>
-          <p className="text-neutral-500 text-sm">@Google SDE-2</p>
+          <h2 className="text-white font-bold">Priya Singh</h2>
+          <p className="text-neutral-500 text-sm">@Microsoft SDE-1</p>
           <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Cracked Google SDE-2 after 3 months of consistent practice! all credit goes to  my techer mentor shivam kumar
+            MockRound.AI's mentorship program was game-changing. Got my dream job at Microsoft!
           </p>
         </div>
       </div>
 
-
-      
-         
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
+            src="https://www.youtube.com/embed/jNQXAC9IVRw?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white  font-bold">Shivam Sharma</h2>
-          <p className="text-neutral-500 text-sm">@Google SDE-2</p>
+          <h2 className="text-white font-bold">Rahul Gupta</h2>
+          <p className="text-neutral-500 text-sm">@Amazon SDE-3</p>
           <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Cracked Google SDE-2 after 3 months of consistent practice! all credit goes to  my techer mentor shivam kumar
+            Test templates saved me weeks of prep time. Cleared Amazon's coding rounds easily.
           </p>
         </div>
       </div>
 
-
-         
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
+            src="https://www.youtube.com/embed/9bZkp7q19f0?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white  font-bold">Shivam Sharma</h2>
-          <p className="text-neutral-500 text-sm">@Google SDE-2</p>
+          <h2 className="text-white font-bold">Anita Patel</h2>
+          <p className="text-neutral-500 text-sm">@Meta Frontend</p>
           <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Cracked Google SDE-2 after 3 months of consistent practice! all credit goes to  my techer mentor shivam kumar
+            Interview challenges boosted my confidence. Now working at Meta as Frontend Engineer!
           </p>
         </div>
       </div>
 
-
-         
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
+            src="https://www.youtube.com/embed/kJQP7kiw5Fk?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white  font-bold">Shivam Sharma</h2>
-          <p className="text-neutral-500 text-sm">@Google SDE-2</p>
+          <h2 className="text-white font-bold">Vikash Kumar</h2>
+          <p className="text-neutral-500 text-sm">@Flipkart SDE-2</p>
           <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Cracked Google SDE-2 after 3 months of consistent practice! all credit goes to  my techer mentor shivam kumar
+            1:1 mentorship was incredible. My mentor guided me through system design interviews.
           </p>
         </div>
       </div>
 
-
-         
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
+            src="https://www.youtube.com/embed/L_jWHffIx5E?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white  font-bold">Shivam Sharma</h2>
-          <p className="text-neutral-500 text-sm">@Google SDE-2</p>
+          <h2 className="text-white font-bold">Sneha Reddy</h2>
+          <p className="text-neutral-500 text-sm">@Uber Backend</p>
           <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Cracked Google SDE-2 after 3 months of consistent practice! all credit goes to  my techer mentor shivam kumar
+            Discussion forum helped me learn from others' experiences. Landed Uber backend role!
           </p>
         </div>
       </div>
 
-
-         
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
+            src="https://www.youtube.com/embed/fJ9rUzIMcZQ?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white  font-bold">Shivam Sharma</h2>
-          <p className="text-neutral-500 text-sm">@Google SDE-2</p>
+          <h2 className="text-white font-bold">Arjun Mehta</h2>
+          <p className="text-neutral-500 text-sm">@TCS Digital</p>
           <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Cracked Google SDE-2 after 3 months of consistent practice! all credit goes to  my techer mentor shivam kumar
+            AI proctoring made practice feel real. Improved my performance significantly in interviews.
           </p>
         </div>
       </div>
@@ -970,7 +957,7 @@ function page() {
           className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
         >
           <Image
-            src="/google.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png"
             width={80}
             height={80}
             alt="Google"
@@ -981,20 +968,7 @@ function page() {
           className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
         >
           <Image
-            src="/meta.png"
-            width={80}
-            height={80}
-            alt="Google"
-            className="h-full w-full object-contain filter  "
-          />
-        </motion.div>
-
-
-        <motion.div 
-          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
-        >
-          <Image
-            src="/amazone.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png"
             width={80}
             height={80}
             alt="Google"
@@ -1007,7 +981,20 @@ function page() {
           className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
         >
           <Image
-            src="/uber.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202025-12-30%20205233.png"
+            width={80}
+            height={80}
+            alt="Google"
+            className="h-full w-full object-contain filter  "
+          />
+        </motion.div>
+
+
+        <motion.div 
+          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+        >
+          <Image
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png"
             width={80}
             height={80}
             alt="Google"
@@ -1019,7 +1006,7 @@ function page() {
           className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
         >
           <Image
-            src="/flipkart.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/flipkart.png"
             width={80}
             height={80}
             alt="Google"
@@ -1159,7 +1146,7 @@ function page() {
             <div className="flex justify-between items-center">
               <div>
                 <Image
-                  src="/logo2.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
                   alt="MockRound.AI Logo"
                   width={120}
                   height={40}

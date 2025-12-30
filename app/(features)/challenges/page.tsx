@@ -20,7 +20,7 @@ function Navbar() {
         <div className='flex items-center ml-4 sm:ml-16 md:ml-64 mt-[-20px]'>
           <Link href='/home'>
             <Image
-              src="/logo2.png"
+              src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
               alt="MockRound.AI Logo"
               width={150}
               height={10}
@@ -278,7 +278,7 @@ function ChallengesPage() {
             <div className="w-full mx-auto relative mb-8">
               <div className="w-full h-95 relative overflow-hidden rounded-lg">
                 <img
-                  src='/challnage.png'
+                  src='https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/challnage.png'
                   alt="logo"
                   className="w-full h-full object-cover"
                 />
@@ -288,7 +288,7 @@ function ChallengesPage() {
             <div className="w-full max-w-md mx-auto border border-neutral-500/50 lg:h-90  bg-black rounded-lg overflow-hidden  relative shadow-lg ">
               <div className="w-full p-2 h-40 relative mb-4  ">
                 <img 
-                  src='./amazone.png'
+                  src='https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/amazone.png'
                   alt="logo"
                   className="w-full p-2 h-40 object-cover border border-neutral-500/50 rounded-xl"
                 />
