@@ -78,7 +78,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         {data.navMain.map((section, index) => (
           <SidebarGroup key={index} className="bg-black">
             <SidebarGroupContent>
-              <SidebarMenu className="space-y-3">
+              <SidebarMenu className="space-y-3 mt-8">
                 {section.items.map((item) => (
                   <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton 

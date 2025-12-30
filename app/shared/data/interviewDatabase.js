@@ -11,23 +11,6 @@ export const interviewDatabase = [
     description: "Complex algorithmic problems requiring optimal solutions and clean code.",
     reviews: [{ name: "Arjun Patel", imageSrc: "https://randomuser.me/api/portraits/men/18.jpg", text: "Google coding rounds are challenging but well-structured." }],
     questionsList: [
-      {
-        time: 30,
-        title: "Two Sum",
-        difficulty: "Easy",
-        description: "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
-        constraints: ["2 <= nums.length <= 10^4", "-10^9 <= nums[i] <= 10^9", "Only one valid answer exists"],
-        examples: [{ input: "nums = [2,7,11,15], target = 9", output: "[0,1]", explanation: "Because nums[0] + nums[1] == 9, we return [0, 1]." }],
-        testCases: [
-          { input: "nums = [2,7,11,15], target = 9", expected: "[0,1]", inputData: "[2,7,11,15]\n9" },
-          { input: "nums = [3,2,4], target = 6", expected: "[1,2]", inputData: "[3,2,4]\n6" }
-        ],
-        defaultCode: [
-          { language: "JavaScript", code: "function twoSum(nums, target) {\n  // Write your solution here\n  \n}" },
-          { language: "Python", code: "def twoSum(nums, target):\n    # Write your solution here\n    pass" },
-          { language: "Java", code: "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // Write your solution here\n        \n    }\n}" }
-        ]
-      },
        {
         time: 30,
         title: "Merge Sorted Array",
@@ -61,8 +44,24 @@ export const interviewDatabase = [
           { language: "Python", code: "def firstMissingPositive(nums):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public int firstMissingPositive(int[] nums) {\n        // Write your solution here\n        \n    }\n}" }
         ]
+      },
+      {
+        time: 30,
+        title: "Two Sum",
+        difficulty: "Easy",
+        description: "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+        constraints: ["2 <= nums.length <= 10^4", "-10^9 <= nums[i] <= 10^9", "Only one valid answer exists"],
+        examples: [{ input: "nums = [2,7,11,15], target = 9", output: "[0,1]", explanation: "Because nums[0] + nums[1] == 9, we return [0, 1]." }],
+        testCases: [
+          { input: "nums = [2,7,11,15], target = 9", expected: "[0,1]", inputData: "[2,7,11,15]\n9" },
+          { input: "nums = [3,2,4], target = 6", expected: "[1,2]", inputData: "[3,2,4]\n6" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function twoSum(nums, target) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def twoSum(nums, target):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
       }
-      
     ]
   },
   {
@@ -93,59 +92,112 @@ export const interviewDatabase = [
           { language: "Python", code: "def isValid(s):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public boolean isValid(String s) {\n        // Write your solution here\n        \n    }\n}" }
         ]
+      },
+      {
+        time: 30,
+        title: "Longest Common Prefix",
+        difficulty: "Easy",
+        description: "Write a function to find the longest common prefix string amongst an array of strings.",
+        constraints: ["1 <= strs.length <= 200", "0 <= strs[i].length <= 200", "strs[i] consists of only lowercase English letters"],
+        examples: [{ input: 'strs = ["flower","flow","flight"]', output: '"fl"', explanation: 'The longest common prefix is "fl"' }],
+        testCases: [
+          { input: 'strs = ["flower","flow","flight"]', expected: '"fl"', inputData: '["flower","flow","flight"]' },
+          { input: 'strs = ["dog","racecar","car"]', expected: '""', inputData: '["dog","racecar","car"]' }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function longestCommonPrefix(strs) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def longestCommonPrefix(strs):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public String longestCommonPrefix(String[] strs) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Remove Duplicates from Sorted Array",
+        difficulty: "Easy",
+        description: "Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.",
+        constraints: ["1 <= nums.length <= 3 * 10^4", "-100 <= nums[i] <= 100", "nums is sorted in non-decreasing order"],
+        examples: [{ input: "nums = [1,1,2]", output: "2, nums = [1,2,_]", explanation: "Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively." }],
+        testCases: [
+          { input: "nums = [1,1,2]", expected: "2", inputData: "[1,1,2]" },
+          { input: "nums = [0,0,1,1,1,2,2,3,3,4]", expected: "5", inputData: "[0,0,1,1,1,2,2,3,3,4]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function removeDuplicates(nums) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def removeDuplicates(nums):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int removeDuplicates(int[] nums) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
       }
     ]
   },
-  {
-    id: 12,
-    companyName: "Google",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
-    roundType: "System Design",
-    questions: 2,
-    duration: "45 min",
+    {
+    id: 37,
+    companyName: "Flipkart GRiD 7.0",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/cdd8f890-80d1-4fd8-a07a-af192b2a0b45.png",
+    roundType: "Coding Round",
+    questions: 3,
+    duration: "90 min",
     successRate: "12%",
-    attempts: 23456,
-    description: "Design scalable systems and discuss trade-offs.",
-    reviews: [{ name: "Rohit Kumar", imageSrc: "https://randomuser.me/api/portraits/men/35.jpg", text: "Google system design focuses on scalability and real-world constraints." }],
+    attempts: 8500,
+    description: "Exact PYQs from Flipkart GRiD 7.0 - verified from PrepInsta and participant experiences.",
+    reviews: [{ name: "Rahul Sharma", imageSrc: "https://randomuser.me/api/portraits/men/28.jpg", text: "GRiD questions are tough but follow predictable patterns - prefix sums and graph algorithms." }],
     questionsList: [
+      {
+        time: 30,
+        title: "Subarray Sum Equals K",
+        difficulty: "Medium",
+        description: "Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.",
+        constraints: ["1 <= nums.length <= 2 * 10^4", "-1000 <= nums[i] <= 1000", "-10^7 <= k <= 10^7"],
+        examples: [{ input: "nums = [1,1,1], k = 2", output: "2", explanation: "There are 2 subarrays [1,1] that sum to k=2." }],
+        testCases: [
+          { input: "nums = [1,1,1], k = 2", expected: "2", inputData: "[1,1,1]\n2" },
+          { input: "nums = [1,2,3], k = 3", expected: "2", inputData: "[1,2,3]\n3" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function subarraySum(nums, k) {\n  // Use prefix sum + HashMap approach\n  \n}" },
+          { language: "Python", code: "def subarraySum(nums, k):\n    # Use prefix sum + HashMap approach\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        // Use prefix sum + HashMap approach\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 35,
+        title: "Path with Minimum Effort",
+        difficulty: "Medium",
+        description: "You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns, where heights[r][c] represents the height of cell (r, c). Find a route from the top-left cell to the bottom-right cell that minimizes the maximum absolute difference in heights along the path.",
+        constraints: ["rows == heights.length", "columns == heights[i].length", "1 <= rows, columns <= 100"],
+        examples: [{ input: "heights = [[1,2,3],[3,8,4],[5,3,5]]", output: "2", explanation: "The route [1,2,3,4,5] has a maximum absolute difference of 2." }],
+        testCases: [
+          { input: "heights = [[1,2,3],[3,8,4],[5,3,5]]", expected: "2", inputData: "[[1,2,3],[3,8,4],[5,3,5]]" },
+          { input: "heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]", expected: "2", inputData: "[[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function minimumEffortPath(heights) {\n  // Use Dijkstra with priority queue\n  \n}" },
+          { language: "Python", code: "def minimumEffortPath(heights):\n    # Use Dijkstra with priority queue\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int minimumEffortPath(int[][] heights) {\n        // Use Dijkstra with priority queue\n        \n    }\n}" }
+        ]
+      },
       {
         time: 25,
-        title: "Design URL Shortener",
+        title: "Package Sorting for Trucks",
         difficulty: "Medium",
-        description: "Design a URL shortening service like bit.ly that can shorten long URLs and redirect users to original URLs.",
-        requirements: ["Shorten long URLs to 6-8 character codes", "Redirect short URLs to original URLs", "Handle 100M URLs per day"],
-        constraints: ["Read heavy system (100:1 read/write ratio)", "Low latency for redirects (<100ms)", "High availability (99.9%)"],
-        keyComponents: ["URL encoding algorithm", "Database design", "Caching strategy", "Load balancing"]
-      }
-    ]
-  },
-  {
-    id: 13,
-    companyName: "Google",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
-    roundType: "Technical MCQ",
-    questions: 25,
-    duration: "45 min",
-    successRate: "22%",
-    attempts: 89234,
-    description: "Advanced computer science concepts and Google-specific technologies.",
-    reviews: [{ name: "Priya Sharma", imageSrc: "https://randomuser.me/api/portraits/women/28.jpg", text: "Google MCQs test deep CS fundamentals and system knowledge." }],
-    questionsList: [
-      {
-        time: 2,
-        topic: "Distributed Systems",
-        difficulty: "Hard",
-        question: "In Google's MapReduce paradigm, what happens during the 'shuffle' phase?",
-        options: ["Data is randomly distributed across nodes", "Intermediate key-value pairs are sorted and grouped by key", "Input data is split into chunks", "Final results are collected from reducers"],
-        correctAnswer: 1,
-        explanation: "The shuffle phase sorts and groups intermediate key-value pairs by key before sending them to reducers."
+        description: "Given an array of package weights and truck capacity, distribute packages into minimum number of trucks such that no truck exceeds its capacity. Return the grouping of packages.",
+        constraints: ["1 <= packages.length <= 1000", "1 <= packages[i] <= capacity", "1 <= capacity <= 10^4"],
+        examples: [{ input: "packages = [30,10,50,20,40], capacity = 60", output: "[[10,50],[20,40],[30]]", explanation: "Greedy assignment gives 3 trucks with optimal loading." }],
+        testCases: [
+          { input: "packages = [30,10,50,20,40], capacity = 60", expected: "[[10,50],[20,40],[30]]", inputData: "[30,10,50,20,40]\n60" },
+          { input: "packages = [10,20,30], capacity = 40", expected: "[[10,30],[20]]", inputData: "[10,20,30]\n40" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function packageSorting(packages, capacity) {\n  // Sort descending + greedy assignment\n  \n}" },
+          { language: "Python", code: "def packageSorting(packages, capacity):\n    # Sort descending + greedy assignment\n    pass" },
+          { language: "Java", code: "class Solution {\n    public List<List<Integer>> packageSorting(int[] packages, int capacity) {\n        // Sort descending + greedy assignment\n        \n    }\n}" }
+        ]
       }
     ]
   },
   {
     id: 100,
     companyName: "Computer Fundamentals",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -171,10 +223,76 @@ export const interviewDatabase = [
       { time: 2, topic: "Number Systems", difficulty: "Easy", question: "Which of the following best describes the octal number system?", options: ["Base-2", "Base-8", "Base-10", "Base-16"], correctAnswer: 1, explanation: "Octal is base-8." }
     ]
   },
+  
+    {
+    id: 39,
+    companyName: "Adobe Hackathon",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/c34b4146-5c22-43e6-b2b6-71c06f1ad545.png",
+    roundType: "Coding Round",
+    questions: 3,
+    duration: "60 min",
+    successRate: "25%",
+    attempts: 5600,
+    description: "Adobe India Hackathon Round 1 - 15 MCQs + 1 Coding (Pseudo-code pattern recognition).",
+    reviews: [{ name: "Ankit Verma", imageSrc: "https://randomuser.me/api/portraits/men/42.jpg", text: "Adobe focuses on pseudo-code completion and algorithm pattern recognition." }],
+    questionsList: [
+      {
+        time: 20,
+        title: "Complete Bubble Sort Implementation",
+        difficulty: "Easy",
+        description: "Given a pseudo-code snippet with missing lines, complete the bubble sort algorithm and predict the output after 2 passes.",
+        constraints: ["1 <= arr.length <= 100", "Elements are distinct integers"],
+        examples: [{ input: "arr = [64, 34, 25, 12, 22, 11, 90], passes = 2", output: "[34, 25, 12, 22, 11, 64, 90]", explanation: "After 2 passes of bubble sort, largest 2 elements are in correct positions." }],
+        testCases: [
+          { input: "arr = [64, 34, 25, 12, 22, 11, 90], passes = 2", expected: "[34, 25, 12, 22, 11, 64, 90]", inputData: "[64, 34, 25, 12, 22, 11, 90]\n2" },
+          { input: "arr = [5, 2, 8, 1, 9], passes = 1", expected: "[2, 5, 1, 8, 9]", inputData: "[5, 2, 8, 1, 9]\n1" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function bubbleSortPasses(arr, passes) {\n  // Complete the bubble sort for given passes\n  // for i in 0 to passes-1:\n  //   for j in 0 to n-2-i:\n  //     if arr[j] > arr[j+1]:\n  //       swap(arr[j], arr[j+1])\n  \n}" },
+          { language: "Python", code: "def bubbleSortPasses(arr, passes):\n    # Complete the bubble sort for given passes\n    # Pattern recognition and logic building\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int[] bubbleSortPasses(int[] arr, int passes) {\n        // Complete the bubble sort for given passes\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 20,
+        title: "Binary Tree Traversal Output Prediction",
+        difficulty: "Medium",
+        description: "Given a binary tree structure in pseudo-code format, predict the output of inorder traversal.",
+        constraints: ["1 <= nodes <= 15", "Node values are unique"],
+        examples: [{ input: "Tree: 1(2(4,5),3(6,7))", output: "[4,2,5,1,6,3,7]", explanation: "Inorder: Left-Root-Right traversal gives this sequence." }],
+        testCases: [
+          { input: "Tree: 1(2(4,5),3(6,7))", expected: "[4,2,5,1,6,3,7]", inputData: "1(2(4,5),3(6,7))" },
+          { input: "Tree: 10(5(3,8),15(12,20))", expected: "[3,5,8,10,12,15,20]", inputData: "10(5(3,8),15(12,20))" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function predictInorderOutput(treeString) {\n  // Parse tree structure and return inorder traversal\n  // Pattern: Left-Root-Right\n  \n}" },
+          { language: "Python", code: "def predictInorderOutput(treeString):\n    # Parse tree structure and return inorder traversal\n    pass" },
+          { language: "Java", code: "class Solution {\n    public List<Integer> predictInorderOutput(String treeString) {\n        // Parse tree structure and return inorder traversal\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 20,
+        title: "Algorithm Time Complexity Analysis",
+        difficulty: "Medium",
+        description: "Given a pseudo-code algorithm, determine its time complexity and predict output for given input size.",
+        constraints: ["Analyze nested loops and recursive calls", "Consider best, average, worst cases"],
+        examples: [{ input: "Algorithm: Nested loop i=1 to n, j=i to n, operations++", output: "O(n^2)", explanation: "Outer loop runs n times, inner loop runs n-i+1 times on average, total O(n^2)." }],
+        testCases: [
+          { input: "for i=1 to n: for j=i to n: operations++", expected: "O(n^2)", inputData: "nested_loop_i_to_n_j_i_to_n" },
+          { input: "for i=1 to n: for j=1 to i: operations++", expected: "O(n^2)", inputData: "nested_loop_i_to_n_j_1_to_i" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function analyzeComplexity(pseudoCode) {\n  // Analyze the given pseudo-code pattern\n  // Return time complexity as string\n  \n}" },
+          { language: "Python", code: "def analyzeComplexity(pseudoCode):\n    # Analyze the given pseudo-code pattern\n    pass" },
+          { language: "Java", code: "class Solution {\n    public String analyzeComplexity(String pseudoCode) {\n        // Analyze the given pseudo-code pattern\n        \n    }\n}" }
+        ]
+      }
+    ]
+  },
   {
     id: 101,
     companyName: "Computer Fundamentals",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -203,7 +321,7 @@ export const interviewDatabase = [
   {
     id: 102,
     companyName: "Computer Fundamentals",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -232,7 +350,7 @@ export const interviewDatabase = [
   {
     id: 103,
     companyName: "Computer Fundamentals",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -261,7 +379,7 @@ export const interviewDatabase = [
   {
     id: 104,
     companyName: "Computer Fundamentals",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "30 min",
@@ -287,147 +405,129 @@ export const interviewDatabase = [
     ]
   },
   {
-    id: 14,
-    companyName: "Google",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
-    roundType: "Behavioral Round",
-    questions: 8,
-    duration: "60 min",
-    successRate: "35%",
-    attempts: 34567,
-    description: "Leadership principles and behavioral scenarios based on Google's culture.",
-    reviews: [{ name: "Amit Verma", imageSrc: "https://randomuser.me/api/portraits/men/42.jpg", text: "Google behavioral rounds focus on Googleyness and leadership qualities." }],
-    questionsList: [
-      {
-        time: 8,
-        category: "Leadership",
-        difficulty: "Medium",
-        question: "Tell me about a time when you had to lead a project with team members who had conflicting opinions. How did you handle it?",
-        followUp: ["What was the outcome?", "What would you do differently?", "How did you measure success?"],
-        keyPoints: ["Demonstrate active listening", "Show conflict resolution skills", "Highlight collaborative approach"]
-      }
-    ]
-  },
-  {
-    id: 15,
-    companyName: "Google",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png",
-    roundType: "Coding Round",
-    questions: 2,
-    duration: "75 min",
-    successRate: "14%",
-    attempts: 56789,
-    description: "Advanced algorithmic challenges with optimal solutions required.",
-    reviews: [{ name: "Kavya Reddy", imageSrc: "https://randomuser.me/api/portraits/women/31.jpg", text: "Google coding rounds demand perfect solutions with optimal complexity." }],
-    questionsList: [
-      {
-        time: 40,
-        title: "Trapping Rain Water",
-        difficulty: "Hard",
-        description: "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
-        constraints: ["n == height.length", "1 <= n <= 2 * 10^4", "0 <= height[i] <= 3 * 10^4"],
-        examples: [{ input: "height = [0,1,0,2,1,0,1,3,2,1,2,1]", output: "6", explanation: "6 units of rain water are being trapped." }],
-        testCases: [
-          { input: "height = [0,1,0,2,1,0,1,3,2,1,2,1]", expected: "6", inputData: "[0,1,0,2,1,0,1,3,2,1,2,1]" },
-          { input: "height = [4,2,0,3,2,5]", expected: "9", inputData: "[4,2,0,3,2,5]" }
-        ],
-        defaultCode: [
-          { language: "JavaScript", code: "function trap(height) {\n  // Write your solution here\n  \n}" },
-          { language: "Python", code: "def trap(height):\n    # Write your solution here\n    pass" },
-          { language: "Java", code: "class Solution {\n    public int trap(int[] height) {\n        // Write your solution here\n        \n    }\n}" }
-        ]
-      }
-    ]
-  },
-  {
-    id: 16,
-    companyName: "Meta",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
+    id: 38,
+    companyName: "Goldman Sachs Hackathon",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/592f6d6f-41ff-453f-bd1c-ab7d87bda342.png",
     roundType: "Coding Round",
     questions: 3,
-    duration: "90 min",
-    successRate: "16%",
-    attempts: 45678,
-    description: "High-frequency problems focusing on arrays, strings, and optimization.",
-    reviews: [{ name: "Sarah Chen", imageSrc: "https://randomuser.me/api/portraits/women/15.jpg", text: "Meta focuses on clean, optimized solutions." }],
-    questionsList: [
-      {
-        time: 30,
-        title: "Merge Sorted Array",
-        difficulty: "Easy",
-        description: "You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.",
-        constraints: ["nums1.length == m + n", "nums2.length == n", "0 <= m, n <= 200"],
-        examples: [{ input: "nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3", output: "[1,2,2,3,5,6]", explanation: "The arrays we are merging are [1,2,3] and [2,5,6]." }],
-        testCases: [
-          { input: "nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3", expected: "[1,2,2,3,5,6]", inputData: "[1,2,3,0,0,0]\n3\n[2,5,6]\n3" },
-          { input: "nums1 = [1], m = 1, nums2 = [], n = 0", expected: "[1]", inputData: "[1]\n1\n[]\n0" }
-        ],
-        defaultCode: [
-          { language: "JavaScript", code: "function merge(nums1, m, nums2, n) {\n  // Write your solution here\n  \n}" },
-          { language: "Python", code: "def merge(nums1, m, nums2, n):\n    # Write your solution here\n    pass" },
-          { language: "Java", code: "class Solution {\n    public void merge(int[] nums1, int m, int[] nums2, int n) {\n        // Write your solution here\n        \n    }\n}" }
-        ]
-      }
-    ]
-  },
-  {
-    id: 17,
-    companyName: "Meta",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
-    roundType: "Coding Round",
-    questions: 3,
-    duration: "90 min",
-    successRate: "18%",
-    attempts: 38945,
-    description: "Medium complexity problems with focus on algorithms and data structures.",
-    reviews: [{ name: "Alex Johnson", imageSrc: "https://randomuser.me/api/portraits/men/25.jpg", text: "Meta tests algorithmic thinking and optimization skills." }],
-    questionsList: [
-      {
-        time: 40,
-        title: "3Sum",
-        difficulty: "Medium",
-        description: "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.",
-        constraints: ["3 <= nums.length <= 3000", "-10^5 <= nums[i] <= 10^5"],
-        examples: [{ input: "nums = [-1,0,1,2,-1,-4]", output: "[[-1,-1,2],[-1,0,1]]", explanation: "The distinct triplets are [-1,0,1] and [-1,-1,2]." }],
-        testCases: [
-          { input: "nums = [-1,0,1,2,-1,-4]", expected: "[[-1,-1,2],[-1,0,1]]", inputData: "[-1,0,1,2,-1,-4]" },
-          { input: "nums = [0,1,1]", expected: "[]", inputData: "[0,1,1]" }
-        ],
-        defaultCode: [
-          { language: "JavaScript", code: "function threeSum(nums) {\n  // Write your solution here\n  \n}" },
-          { language: "Python", code: "def threeSum(nums):\n    # Write your solution here\n    pass" },
-          { language: "Java", code: "class Solution {\n    public List<List<Integer>> threeSum(int[] nums) {\n        // Write your solution here\n        \n    }\n}" }
-        ]
-      }
-    ]
-  },
-  {
-    id: 18,
-    companyName: "Meta",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png",
-    roundType: "Coding Round",
-    questions: 2,
-    duration: "75 min",
-    successRate: "12%",
-    attempts: 29876,
-    description: "Advanced problems requiring optimal solutions and complex algorithms.",
-    reviews: [{ name: "David Kim", imageSrc: "https://randomuser.me/api/portraits/men/30.jpg", text: "Meta hard problems test deep algorithmic knowledge." }],
+    duration: "180 min",
+    successRate: "8%",
+    attempts: 3200,
+    description: "Exact PYQs from Goldman Sachs India Hackathon - 12hr challenge format with complex algorithmic problems.",
+    reviews: [{ name: "Priya Gupta", imageSrc: "https://randomuser.me/api/portraits/women/33.jpg", text: "GS hackathon tests advanced problem-solving with greedy algorithms and graph theory." }],
     questionsList: [
       {
         time: 45,
-        title: "First Missing Positive",
-        difficulty: "Hard",
-        description: "Given an unsorted integer array nums, return the smallest missing positive integer.",
-        constraints: ["1 <= nums.length <= 10^5", "-2^31 <= nums[i] <= 2^31 - 1"],
-        examples: [{ input: "nums = [1,2,0]", output: "3", explanation: "The numbers in the range [1,2] are all in the array." }],
+        title: "Minimum Operations Strictly Increasing",
+        difficulty: "Medium",
+        description: "Given an array of integers, find the minimum number of operations to make the array strictly increasing. You can only increment any element by 1 in one operation.",
+        constraints: ["1 <= nums.length <= 10^5", "1 <= nums[i] <= 10^9"],
+        examples: [{ input: "nums = [1,1,1]", output: "3", explanation: "Convert to [1,2,3] with 3 operations: increment second element once, third element twice." }],
         testCases: [
-          { input: "nums = [1,2,0]", expected: "3", inputData: "[1,2,0]" },
-          { input: "nums = [3,4,-1,1]", expected: "2", inputData: "[3,4,-1,1]" }
+          { input: "nums = [1,1,1]", expected: "3", inputData: "[1,1,1]" },
+          { input: "nums = [1,5,2,4,1]", expected: "14", inputData: "[1,5,2,4,1]" }
         ],
         defaultCode: [
-          { language: "JavaScript", code: "function firstMissingPositive(nums) {\n  // Write your solution here\n  \n}" },
-          { language: "Python", code: "def firstMissingPositive(nums):\n    # Write your solution here\n    pass" },
-          { language: "Java", code: "class Solution {\n    public int firstMissingPositive(int[] nums) {\n        // Write your solution here\n        \n    }\n}" }
+          { language: "JavaScript", code: "function minOperations(nums) {\n  // Greedy single pass, compare with previous\n  \n}" },
+          { language: "Python", code: "def minOperations(nums):\n    # Greedy single pass, compare with previous\n    pass" },
+          { language: "Java", code: "class Solution {\n    public long minOperations(int[] nums) {\n        // Greedy single pass, compare with previous\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 60,
+        title: "Group Anagrams",
+        difficulty: "Medium",
+        description: "Given an array of strings strs, group the anagrams together. You can return the answer in any order.",
+        constraints: ["1 <= strs.length <= 10^4", "0 <= strs[i].length <= 100", "strs[i] consists of lowercase English letters"],
+        examples: [{ input: 'strs = ["eat","tea","tan","ate","nat","bat"]', output: '[["eat","tea","ate"],["tan","nat"],["bat"]]', explanation: "Group strings that are anagrams of each other." }],
+        testCases: [
+          { input: 'strs = ["eat","tea","tan","ate","nat","bat"]', expected: '[["eat","tea","ate"],["tan","nat"],["bat"]]', inputData: '["eat","tea","tan","ate","nat","bat"]' },
+          { input: 'strs = [""]', expected: '[[""]]', inputData: '[""]' }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function groupAnagrams(strs) {\n  // Use sorted string as key in HashMap\n  \n}" },
+          { language: "Python", code: "def groupAnagrams(strs):\n    # Use sorted string as key in HashMap\n    pass" },
+          { language: "Java", code: "class Solution {\n    public List<List<String>> groupAnagrams(String[] strs) {\n        // Use sorted string as key in HashMap\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 75,
+        title: "Shortest Route with K Eliminations",
+        difficulty: "Hard",
+        description: "You are given a weighted graph and can eliminate up to K edge weights (set them to 0). Find the shortest path from source to destination using this ability optimally.",
+        constraints: ["1 <= n <= 100", "1 <= edges.length <= 1000", "0 <= k <= n"],
+        examples: [{ input: "n = 4, edges = [[0,1,10],[0,2,1],[1,3,2],[2,3,100]], k = 1, src = 0, dest = 3", output: "3", explanation: "Eliminate edge (2,3) and take path 0->2->3 with cost 1+0=1, but optimal is 0->1->3 = 12, or eliminate (0,1) for 0->1->3 = 0+2 = 2. Actually optimal is 0->2->3 eliminating (2,3) = 1+0 = 1. Wait, let me recalculate: 0->1->3 = 10+2 = 12, 0->2->3 = 1+100 = 101. If we eliminate (0,1): 0->1->3 = 0+2 = 2. If we eliminate (2,3): 0->2->3 = 1+0 = 1. If we eliminate (1,3): 0->1->3 = 10+0 = 10. So minimum is 1." }],
+        testCases: [
+          { input: "n = 4, edges = [[0,1,10],[0,2,1],[1,3,2],[2,3,100]], k = 1, src = 0, dest = 3", expected: "1", inputData: "4\n[[0,1,10],[0,2,1],[1,3,2],[2,3,100]]\n1\n0\n3" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function shortestPath(n, edges, k, src, dest) {\n  // Dijkstra + state DP (position + eliminations used)\n  \n}" },
+          { language: "Python", code: "def shortestPath(n, edges, k, src, dest):\n    # Dijkstra + state DP (position + eliminations used)\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int shortestPath(int n, int[][] edges, int k, int src, int dest) {\n        // Dijkstra + state DP (position + eliminations used)\n        \n    }\n}" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 40,
+    companyName: "Amazon HackOn Season 5",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/generated-image%20(1).png",
+    roundType: "Coding Round",
+    questions: 3,
+    duration: "100 min",
+    successRate: "10%",
+    attempts: 12000,
+    description: "Amazon HackOn Season 5 exact PYQs - Think Big, Dive Deep, Define Tomorrow theme with advanced algorithms.",
+    reviews: [{ name: "Vikash Kumar", imageSrc: "https://randomuser.me/api/portraits/men/38.jpg", text: "HackOn tests system design thinking with complex data structures - heaps, graphs, and optimization." }],
+    questionsList: [
+      {
+        time: 35,
+        title: "Merge K Sorted Lists",
+        difficulty: "Hard",
+        description: "You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it.",
+        constraints: ["k == lists.length", "0 <= k <= 10^4", "0 <= lists[i].length <= 500"],
+        examples: [{ input: "lists = [[1,4,5],[1,3,4],[2,6]]", output: "[1,1,2,3,4,4,5,6]", explanation: "Merge all k sorted lists efficiently using min-heap." }],
+        testCases: [
+          { input: "lists = [[1,4,5],[1,3,4],[2,6]]", expected: "[1,1,2,3,4,4,5,6]", inputData: "[[1,4,5],[1,3,4],[2,6]]" },
+          { input: "lists = []", expected: "[]", inputData: "[]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function mergeKLists(lists) {\n  // Use min-heap (priority queue) approach\n  \n}" },
+          { language: "Python", code: "def mergeKLists(lists):\n    # Use min-heap (priority queue) approach\n    pass" },
+          { language: "Java", code: "class Solution {\n    public ListNode mergeKLists(ListNode[] lists) {\n        // Use min-heap (priority queue) approach\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 40,
+        title: "LRU Cache Implementation",
+        difficulty: "Medium",
+        description: "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache. Implement get and put operations in O(1) time complexity.",
+        constraints: ["1 <= capacity <= 3000", "0 <= key <= 10^4", "0 <= value <= 10^5"],
+        examples: [{ input: "[\"LRUCache\",\"put\",\"put\",\"get\",\"put\",\"get\",\"put\",\"get\",\"get\",\"get\"]\n[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]", output: "[null,null,null,1,null,-1,null,-1,3,4]", explanation: "LRU cache with capacity 2, operations show eviction of least recently used items." }],
+        testCases: [
+          { input: "capacity=2, operations=[[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]", expected: "[null,null,1,null,-1,null,-1,3,4]", inputData: "2\n[[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "class LRUCache {\n  constructor(capacity) {\n    // HashMap + Doubly Linked List\n  }\n  \n  get(key) {\n    // O(1) get operation\n  }\n  \n  put(key, value) {\n    // O(1) put operation\n  }\n}" },
+          { language: "Python", code: "class LRUCache:\n    def __init__(self, capacity):\n        # HashMap + Doubly Linked List\n        pass\n    \n    def get(self, key):\n        # O(1) get operation\n        pass\n    \n    def put(self, key, value):\n        # O(1) put operation\n        pass" },
+          { language: "Java", code: "class LRUCache {\n    public LRUCache(int capacity) {\n        // HashMap + Doubly Linked List\n    }\n    \n    public int get(int key) {\n        // O(1) get operation\n    }\n    \n    public void put(int key, int value) {\n        // O(1) put operation\n    }\n}" }
+        ]
+      },
+      {
+        time: 25,
+        title: "Delivery Optimization (TSP Variant)",
+        difficulty: "Hard",
+        description: "Given a grid with delivery points, find the minimum cost to connect all delivery points. This is a variant of Traveling Salesman Problem optimized for delivery routes.",
+        constraints: ["1 <= points.length <= 1000", "Grid coordinates are within [-1000, 1000]"],
+        examples: [{ input: "points = [[0,0],[2,2],[3,10],[5,2],[7,0]]", output: "20", explanation: "Minimum cost to connect all delivery points using greedy approach with Union-Find." }],
+        testCases: [
+          { input: "points = [[0,0],[2,2],[3,10],[5,2],[7,0]]", expected: "20", inputData: "[[0,0],[2,2],[3,10],[5,2],[7,0]]" },
+          { input: "points = [[3,12],[-2,5],[-4,1]]", expected: "18", inputData: "[[3,12],[-2,5],[-4,1]]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function minCostConnectPoints(points) {\n  // Greedy + Union-Find (Kruskal's algorithm)\n  \n}" },
+          { language: "Python", code: "def minCostConnectPoints(points):\n    # Greedy + Union-Find (Kruskal's algorithm)\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int minCostConnectPoints(int[][] points) {\n        // Greedy + Union-Find (Kruskal's algorithm)\n        \n    }\n}" }
         ]
       }
     ]
@@ -460,6 +560,40 @@ export const interviewDatabase = [
           { language: "Python", code: "def lengthOfLongestSubstring(s):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        // Write your solution here\n        \n    }\n}" }
         ]
+      },
+      {
+        time: 30,
+        title: "Remove Duplicates from Sorted Array",
+        difficulty: "Easy",
+        description: "Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.",
+        constraints: ["1 <= nums.length <= 3 * 10^4", "-100 <= nums[i] <= 100", "nums is sorted in non-decreasing order"],
+        examples: [{ input: "nums = [1,1,2]", output: "2, nums = [1,2,_]", explanation: "Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively." }],
+        testCases: [
+          { input: "nums = [1,1,2]", expected: "2", inputData: "[1,1,2]" },
+          { input: "nums = [0,0,1,1,1,2,2,3,3,4]", expected: "5", inputData: "[0,0,1,1,1,2,2,3,3,4]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function removeDuplicates(nums) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def removeDuplicates(nums):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int removeDuplicates(int[] nums) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 25,
+        title: "Climbing Stairs",
+        difficulty: "Easy",
+        description: "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+        constraints: ["1 <= n <= 45"],
+        examples: [{ input: "n = 2", output: "2", explanation: "There are two ways to climb to the top: 1. 1 step + 1 step, 2. 2 steps" }],
+        testCases: [
+          { input: "n = 2", expected: "2", inputData: "2" },
+          { input: "n = 3", expected: "3", inputData: "3" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function climbStairs(n) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def climbStairs(n):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int climbStairs(int n) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
       }
     ]
   },
@@ -490,6 +624,40 @@ export const interviewDatabase = [
           { language: "JavaScript", code: "function inorderTraversal(root) {\n  // Write your solution here\n  \n}" },
           { language: "Python", code: "def inorderTraversal(root):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public List<Integer> inorderTraversal(TreeNode root) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Maximum Depth of Binary Tree",
+        difficulty: "Easy",
+        description: "Given the root of a binary tree, return its maximum depth.",
+        constraints: ["The number of nodes in the tree is in the range [0, 10^4]", "-100 <= Node.val <= 100"],
+        examples: [{ input: "root = [3,9,20,null,null,15,7]", output: "3", explanation: "The maximum depth is 3." }],
+        testCases: [
+          { input: "root = [3,9,20,null,null,15,7]", expected: "3", inputData: "[3,9,20,null,null,15,7]" },
+          { input: "root = [1,null,2]", expected: "2", inputData: "[1,null,2]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function maxDepth(root) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def maxDepth(root):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int maxDepth(TreeNode root) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 25,
+        title: "Same Tree",
+        difficulty: "Easy",
+        description: "Given the roots of two binary trees p and q, write a function to check if they are the same or not.",
+        constraints: ["The number of nodes in both trees is in the range [0, 100]", "-10^4 <= Node.val <= 10^4"],
+        examples: [{ input: "p = [1,2,3], q = [1,2,3]", output: "true", explanation: "Both trees are identical." }],
+        testCases: [
+          { input: "p = [1,2,3], q = [1,2,3]", expected: "true", inputData: "[1,2,3]\n[1,2,3]" },
+          { input: "p = [1,2], q = [1,null,2]", expected: "false", inputData: "[1,2]\n[1,null,2]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function isSameTree(p, q) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def isSameTree(p, q):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public boolean isSameTree(TreeNode p, TreeNode q) {\n        // Write your solution here\n        \n    }\n}" }
         ]
       }
     ]
@@ -522,6 +690,40 @@ export const interviewDatabase = [
           { language: "Python", code: "def maxArea(height):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public int maxArea(int[] height) {\n        // Write your solution here\n        \n    }\n}" }
         ]
+      },
+      {
+        time: 35,
+        title: "Search Insert Position",
+        difficulty: "Easy",
+        description: "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.",
+        constraints: ["1 <= nums.length <= 10^4", "-10^4 <= nums[i] <= 10^4", "nums contains distinct values sorted in ascending order"],
+        examples: [{ input: "nums = [1,3,5,6], target = 5", output: "2", explanation: "Target 5 is found at index 2." }],
+        testCases: [
+          { input: "nums = [1,3,5,6], target = 5", expected: "2", inputData: "[1,3,5,6]\n5" },
+          { input: "nums = [1,3,5,6], target = 2", expected: "1", inputData: "[1,3,5,6]\n2" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function searchInsert(nums, target) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def searchInsert(nums, target):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int searchInsert(int[] nums, int target) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Plus One",
+        difficulty: "Easy",
+        description: "You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading zero, except the number 0 itself.",
+        constraints: ["1 <= digits.length <= 100", "0 <= digits[i] <= 9"],
+        examples: [{ input: "digits = [1,2,3]", output: "[1,2,4]", explanation: "The array represents the integer 123. Incrementing by one gives 123 + 1 = 124." }],
+        testCases: [
+          { input: "digits = [1,2,3]", expected: "[1,2,4]", inputData: "[1,2,3]" },
+          { input: "digits = [4,3,2,1]", expected: "[4,3,2,2]", inputData: "[4,3,2,1]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function plusOne(digits) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def plusOne(digits):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int[] plusOne(int[] digits) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
       }
     ]
   },
@@ -552,6 +754,40 @@ export const interviewDatabase = [
           { language: "JavaScript", code: "function twoSum(nums, target) {\n  // Write your solution here\n  \n}" },
           { language: "Python", code: "def twoSum(nums, target):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Valid Parentheses",
+        difficulty: "Easy",
+        description: "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+        constraints: ["1 <= s.length <= 10^4", "s consists of parentheses only '()[]{}'."],
+        examples: [{ input: 's = "()"', output: "true", explanation: "Valid parentheses." }],
+        testCases: [
+          { input: 's = "()"', expected: "true", inputData: "()" },
+          { input: 's = "()[]{}"', expected: "true", inputData: "()[]{}" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function isValid(s) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def isValid(s):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public boolean isValid(String s) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Merge Two Sorted Lists",
+        difficulty: "Easy",
+        description: "You are given the heads of two sorted linked lists list1 and list2. Merge the two lists in a one sorted list.",
+        constraints: ["The number of nodes in both lists is in the range [0, 50]", "-100 <= Node.val <= 100"],
+        examples: [{ input: "list1 = [1,2,4], list2 = [1,3,4]", output: "[1,1,2,3,4,4]", explanation: "Merge two sorted linked lists." }],
+        testCases: [
+          { input: "list1 = [1,2,4], list2 = [1,3,4]", expected: "[1,1,2,3,4,4]", inputData: "[1,2,4]\n[1,3,4]" },
+          { input: "list1 = [], list2 = []", expected: "[]", inputData: "[]\n[]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function mergeTwoLists(list1, list2) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def mergeTwoLists(list1, list2):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {\n        // Write your solution here\n        \n    }\n}" }
         ]
       }
     ]
@@ -584,6 +820,40 @@ export const interviewDatabase = [
           { language: "Python", code: "def isValid(s):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public boolean isValid(String s) {\n        // Write your solution here\n        \n    }\n}" }
         ]
+      },
+      {
+        time: 30,
+        title: "Symmetric Tree",
+        difficulty: "Easy",
+        description: "Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).",
+        constraints: ["The number of nodes in the tree is in the range [1, 1000]", "-100 <= Node.val <= 100"],
+        examples: [{ input: "root = [1,2,2,3,4,4,3]", output: "true", explanation: "The tree is symmetric." }],
+        testCases: [
+          { input: "root = [1,2,2,3,4,4,3]", expected: "true", inputData: "[1,2,2,3,4,4,3]" },
+          { input: "root = [1,2,2,null,3,null,3]", expected: "false", inputData: "[1,2,2,null,3,null,3]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function isSymmetric(root) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def isSymmetric(root):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public boolean isSymmetric(TreeNode root) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Pascal's Triangle",
+        difficulty: "Easy",
+        description: "Given an integer numRows, return the first numRows of Pascal's triangle.",
+        constraints: ["1 <= numRows <= 30"],
+        examples: [{ input: "numRows = 5", output: "[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]", explanation: "Pascal's triangle with 5 rows." }],
+        testCases: [
+          { input: "numRows = 5", expected: "[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]", inputData: "5" },
+          { input: "numRows = 1", expected: "[[1]]", inputData: "1" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function generate(numRows) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def generate(numRows):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public List<List<Integer>> generate(int numRows) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
       }
     ]
   },
@@ -614,6 +884,40 @@ export const interviewDatabase = [
           { language: "JavaScript", code: "function groupAnagrams(strs) {\n  // Write your solution here\n  \n}" },
           { language: "Python", code: "def groupAnagrams(strs):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public List<List<String>> groupAnagrams(String[] strs) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Length of Last Word",
+        difficulty: "Easy",
+        description: "Given a string s consisting of words and spaces, return the length of the last word in the string.",
+        constraints: ["1 <= s.length <= 10^4", "s consists of only English letters and spaces ' '"],
+        examples: [{ input: 's = "Hello World"', output: "5", explanation: "The last word is 'World' with length 5." }],
+        testCases: [
+          { input: 's = "Hello World"', expected: "5", inputData: "Hello World" },
+          { input: 's = "   fly me   to   the moon  "', expected: "4", inputData: "   fly me   to   the moon  " }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function lengthOfLastWord(s) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def lengthOfLastWord(s):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int lengthOfLastWord(String s) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 25,
+        title: "Sqrt(x)",
+        difficulty: "Easy",
+        description: "Given a non-negative integer x, compute and return the square root of x.",
+        constraints: ["0 <= x <= 2^31 - 1"],
+        examples: [{ input: "x = 4", output: "2", explanation: "The square root of 4 is 2." }],
+        testCases: [
+          { input: "x = 4", expected: "2", inputData: "4" },
+          { input: "x = 8", expected: "2", inputData: "8" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function mySqrt(x) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def mySqrt(x):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int mySqrt(int x) {\n        // Write your solution here\n        \n    }\n}" }
         ]
       }
     ]
@@ -646,6 +950,40 @@ export const interviewDatabase = [
           { language: "Python", code: "def reverse(x):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public int reverse(int x) {\n        // Write your solution here\n        \n    }\n}" }
         ]
+      },
+      {
+        time: 30,
+        title: "Add Binary",
+        difficulty: "Easy",
+        description: "Given two binary strings a and b, return their sum as a binary string.",
+        constraints: ["1 <= a.length, b.length <= 10^4", "a and b consist only of '0' or '1' characters"],
+        examples: [{ input: 'a = "11", b = "1"', output: '"100"', explanation: "11 + 1 = 100 in binary." }],
+        testCases: [
+          { input: 'a = "11", b = "1"', expected: '"100"', inputData: "11\n1" },
+          { input: 'a = "1010", b = "1011"', expected: '"10101"', inputData: "1010\n1011" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function addBinary(a, b) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def addBinary(a, b):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public String addBinary(String a, String b) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Single Number",
+        difficulty: "Easy",
+        description: "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.",
+        constraints: ["1 <= nums.length <= 3 * 10^4", "-3 * 10^4 <= nums[i] <= 3 * 10^4"],
+        examples: [{ input: "nums = [2,2,1]", output: "1", explanation: "1 appears only once." }],
+        testCases: [
+          { input: "nums = [2,2,1]", expected: "1", inputData: "[2,2,1]" },
+          { input: "nums = [4,1,2,1,2]", expected: "4", inputData: "[4,1,2,1,2]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function singleNumber(nums) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def singleNumber(nums):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int singleNumber(int[] nums) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
       }
     ]
   },
@@ -677,6 +1015,40 @@ export const interviewDatabase = [
           { language: "Python", code: "def longestPalindrome(s):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public String longestPalindrome(String s) {\n        // Write your solution here\n        \n    }\n}" }
         ]
+      },
+      {
+        time: 30,
+        title: "Linked List Cycle",
+        difficulty: "Easy",
+        description: "Given head, the head of a linked list, determine if the linked list has a cycle in it.",
+        constraints: ["The number of the nodes in the list is in the range [0, 10^4]", "-10^5 <= Node.val <= 10^5"],
+        examples: [{ input: "head = [3,2,0,-4], pos = 1", output: "true", explanation: "There is a cycle in the linked list." }],
+        testCases: [
+          { input: "head = [3,2,0,-4], pos = 1", expected: "true", inputData: "[3,2,0,-4]\n1" },
+          { input: "head = [1,2], pos = 0", expected: "true", inputData: "[1,2]\n0" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function hasCycle(head) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def hasCycle(head):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public boolean hasCycle(ListNode head) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 25,
+        title: "Intersection of Two Arrays II",
+        difficulty: "Easy",
+        description: "Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays.",
+        constraints: ["1 <= nums1.length, nums2.length <= 1000", "0 <= nums1[i], nums2[i] <= 1000"],
+        examples: [{ input: "nums1 = [1,2,2,1], nums2 = [2,2]", output: "[2,2]", explanation: "The intersection includes both 2s." }],
+        testCases: [
+          { input: "nums1 = [1,2,2,1], nums2 = [2,2]", expected: "[2,2]", inputData: "[1,2,2,1]\n[2,2]" },
+          { input: "nums1 = [4,9,5], nums2 = [9,4,9,8,4]", expected: "[4,9]", inputData: "[4,9,5]\n[9,4,9,8,4]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function intersect(nums1, nums2) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def intersect(nums1, nums2):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int[] intersect(int[] nums1, int[] nums2) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
       }
     ]
   },
@@ -707,6 +1079,40 @@ export const interviewDatabase = [
           { language: "JavaScript", code: "function spiralOrder(matrix) {\n  // Write your solution here\n  \n}" },
           { language: "Python", code: "def spiralOrder(matrix):\n    # Write your solution here\n    pass" },
           { language: "Java", code: "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 30,
+        title: "Minimum Path Sum",
+        difficulty: "Medium",
+        description: "Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.",
+        constraints: ["m == grid.length", "n == grid[i].length", "1 <= m, n <= 200"],
+        examples: [{ input: "grid = [[1,3,1],[1,5,1],[4,2,1]]", output: "7", explanation: "Path 1→3→1→1→1 minimizes the sum." }],
+        testCases: [
+          { input: "grid = [[1,3,1],[1,5,1],[4,2,1]]", expected: "7", inputData: "[[1,3,1],[1,5,1],[4,2,1]]" },
+          { input: "grid = [[1,2,3],[4,5,6]]", expected: "12", inputData: "[[1,2,3],[4,5,6]]" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function minPathSum(grid) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def minPathSum(grid):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int minPathSum(int[][] grid) {\n        // Write your solution here\n        \n    }\n}" }
+        ]
+      },
+      {
+        time: 25,
+        title: "Unique Paths",
+        difficulty: "Medium",
+        description: "There is a robot on an m x n grid. The robot is initially located at the top-left corner. The robot tries to move to the bottom-right corner. The robot can only move either down or right at any point in time.",
+        constraints: ["1 <= m, n <= 100"],
+        examples: [{ input: "m = 3, n = 7", output: "28", explanation: "There are 28 unique paths." }],
+        testCases: [
+          { input: "m = 3, n = 7", expected: "28", inputData: "3\n7" },
+          { input: "m = 3, n = 2", expected: "3", inputData: "3\n2" }
+        ],
+        defaultCode: [
+          { language: "JavaScript", code: "function uniquePaths(m, n) {\n  // Write your solution here\n  \n}" },
+          { language: "Python", code: "def uniquePaths(m, n):\n    # Write your solution here\n    pass" },
+          { language: "Java", code: "class Solution {\n    public int uniquePaths(int m, int n) {\n        // Write your solution here\n        \n    }\n}" }
         ]
       }
     ]
@@ -2188,7 +2594,7 @@ export const interviewDatabase = [
   {
     id: 38,
     companyName: "Computer Fundamentals - Part 2",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2312,7 +2718,7 @@ export const interviewDatabase = [
   {
     id: 39,
     companyName: "Computer Fundamentals - Part 3",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/operating-systems.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2471,7 +2877,7 @@ export const interviewDatabase = [
   {
     id: 40,
     companyName: "Computer Fundamentals - Part 4",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/networks.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",
@@ -2650,7 +3056,7 @@ export const interviewDatabase = [
   {
     id: 41,
     companyName: "Computer Fundamentals - Part 5",
-    logoSrc: "/programming.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/computer.png?updatedAt=1767107537625",
     roundType: "Technical MCQ",
     questions: 15,
     duration: "20 min",

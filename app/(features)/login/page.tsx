@@ -94,8 +94,9 @@ function Page() {
             alt="Logo"
             width={210}
             height={210}
-            className="mx-auto rounded-full w-60 h-40 md:w-80 md:h-40"
+            className="mx-auto mb-10   h-10  md:h-10"
           />
+          
           <h1 className="text-white text-xl lg:text-2xl mt-3 font-semibold">Welcome Back</h1>
           <h3 className="text-gray-400 text-sm mt-1">Give mock interview and ace your interview</h3>
         </div>

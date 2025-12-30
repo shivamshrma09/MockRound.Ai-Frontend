@@ -82,11 +82,10 @@ function HomePage() {
               <Image
                 src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
                 alt="MockRound.AI Logo"
-                width={100}
-                height={40}
+                width={10}
+                height={10}
                 loading="eager"
-                style={{ width: 'auto', height: 'auto' }}
-                className="object-contain"
+                className="object-contain    w-30 lg:hidden"
               />
             </Link>
 
@@ -105,15 +104,15 @@ function HomePage() {
               <FaUser className='text-xl' />
             </div>
 
-            <div onClick={() => setShowfeedback(!showfeedback)}  className='text-white flex flex-row shadow-xl bg-black border-1 py-2 px-3 border-white   rounded-lg cursor-pointer  items-center gap-3'>
+            <div onClick={() => setShowfeedback(!showfeedback)}  className='text-white hover:scale-105 flex flex-row shadow-xl bg-black border-1 py-2 px-3 border-white   rounded-lg cursor-pointer  items-center gap-3'>
                             <h3 className='text-base font-bold hidden lg:block'>Feedback</h3>
-              <VscFeedback className='text-xl text-orange-500' />
+              <VscFeedback className='text-xl text-[#9e563e]' />
             </div>
           </div>
         </div>
 
         {showfeedback && (
-          <div className='flex flex-row mt-50  bg-black/30 items-center lg:ml-120 justify-center z-100 absolute  lg:mt-50'>
+          <div className='flex flex-row mt-50  bg-black items-center lg:ml-120 justify-center z-100 absolute  lg:mt-50'>
             <Feedback />
             </div>
           

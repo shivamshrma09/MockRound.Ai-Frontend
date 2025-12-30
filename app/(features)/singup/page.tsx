@@ -99,7 +99,7 @@ function Page() {
                      alt="Logo"
                      width={210}
                      height={210}
-                     className="mx-auto rounded-full w-60 h-40 md:w-80 md:h-40"
+            className="mx-auto mb-13   h-10  md:h-10"
                    />
                   <h1 className="text-white text-xl lg:text-2xl mt-3 font-semibold mt-[-20]">Creat you account</h1>
           <h3 className="text-gray-400 text-sm mt-1 mb-5">Give mock interview and ace your interview</h3>
@@ -173,7 +173,7 @@ function Page() {
                   type="text"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
-                  placeholder="Enter 6-digit OTP"
+                  placeholder="Enter  OTP"
                   className="block w-full border-2 border-[#9C9A92] rounded-xl text-white px-4 py-3 text-base focus:border-[#d58e76] focus:outline-none text-center text-2xl tracking-widest"
                   maxLength={6}
                   required

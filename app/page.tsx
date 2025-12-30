@@ -798,7 +798,7 @@ function page() {
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
+            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
@@ -814,7 +814,7 @@ function page() {
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/jNQXAC9IVRw?controls=0"
+            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
@@ -830,7 +830,7 @@ function page() {
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/9bZkp7q19f0?controls=0"
+            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
@@ -846,7 +846,7 @@ function page() {
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/kJQP7kiw5Fk?controls=0"
+            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
@@ -862,7 +862,7 @@ function page() {
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/L_jWHffIx5E?controls=0"
+            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
@@ -878,7 +878,7 @@ function page() {
       <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
         <div className="w-1/2 h-full">
           <iframe
-            src="https://www.youtube.com/embed/fJ9rUzIMcZQ?controls=0"
+            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
             className="w-full h-full object-cover"
           />
         </div>
@@ -957,7 +957,7 @@ function page() {
           className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
         >
           <Image
-            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png?updatedAt=1767107537686"
             width={80}
             height={80}
             alt="Google"
@@ -968,20 +968,7 @@ function page() {
           className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
         >
           <Image
-            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png"
-            width={80}
-            height={80}
-            alt="Google"
-            className="h-full w-full object-contain filter  "
-          />
-        </motion.div>
-
-
-        <motion.div 
-          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
-        >
-          <Image
-            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202025-12-30%20205233.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/infosys.png?updatedAt=1767107537459"
             width={80}
             height={80}
             alt="Google"
@@ -994,7 +981,20 @@ function page() {
           className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
         >
           <Image
-            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png"
+          src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/apple.png?updatedAt=1767107537517"
+            width={80}
+            height={80}
+            alt="Google"
+            className="h-full w-full object-contain filter  "
+          />
+        </motion.div>
+
+
+        <motion.div 
+          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+        >
+          <Image
+          src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png?updatedAt=1767107537497"
             width={80}
             height={80}
             alt="Google"
@@ -1006,7 +1006,19 @@ function page() {
           className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
         >
           <Image
-            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/flipkart.png"
+          src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png?updatedAt=1767107537454"
+            width={80}
+            height={80}
+            alt="Google"
+            className="h-full w-full object-contain filter  "
+          />
+        </motion.div>
+
+            <motion.div 
+          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+        >
+          <Image
+          src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/tcs.png?updatedAt=1767107537593"
             width={80}
             height={80}
             alt="Google"
