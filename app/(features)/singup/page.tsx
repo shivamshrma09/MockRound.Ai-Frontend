@@ -7,8 +7,6 @@ import { Button } from "@heroui/react";
 import { sendOTP, registerUser, verifyOTP } from './services/authService';
 import { useRouter } from 'next/navigation';
 import { FaGoogle } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io5";
 
 function Page() {
   const [step, setStep] = useState(1);

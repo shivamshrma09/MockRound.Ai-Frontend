@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const JUDGE0_API = process.env.NEXT_PUBLIC_JUDGE_ZERO 
+const JUDGE0_API = process.env.NEXT_PUBLIC_JUDGE_ZERO!;
+const RAPIDAPI_KEY = process.env.NEXT_PUBLIC_RAPIDAPI_KEY!;
+const RAPIDAPI_HOST = process.env.NEXT_PUBLIC_RAPIDAPI_HOST!;
 
 const getLanguageId = (language: string): number => {
   const languageMap: { [key: string]: number } = {
@@ -25,6 +27,9 @@ export const runCodeOnJudge0 = async (code: string, language: string, input: str
       {
         headers: {
           'Content-Type': 'application/json',
+          // ✅ YE 2 LINES ADD KI HAIN
+          'x-rapidapi-key': RAPIDAPI_KEY,
+          'x-rapidapi-host': RAPIDAPI_HOST,
         },
         timeout: 30000,
       }
