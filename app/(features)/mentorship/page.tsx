@@ -117,7 +117,7 @@ Available mentors: ${JSON.stringify(mentorSummary)}.
 
 MANDATORY FORMAT:
 **FIRST LINE ONLY**: Top 2-3 mentors with links in this exact format:
-"Mentor1 - [Profile](http://localhost:3000/mentorship/mentor1_id) | Mentor2 - [Profile](http://localhost:3000/mentorship/mentor2_id)"
+"Mentor1 - [Profile](https://mockroundai-six.vercel.app/mentorship/mentor1_id) | Mentor2 - [Profile](https://mockroundai-six.vercel.app/mentorship/mentor2_id)"
 
 Then give advice in Hindi.
 

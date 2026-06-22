@@ -1993,7 +1993,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Fundamentals of Object-Oriented Programming (OOP).",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which of the following is not a pillar of Object-Oriented Programming (OOP)?", options: ["Inheritance", "Polymorphism", "Abstraction", "Integration"], correctAnswer: 3, explanation: "Integration is not considered one of the four core OOP pillars." },
       { id: 2, question: "In OOP, what concept allows a class to inherit properties and methods from another class?", options: ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction"], correctAnswer: 1, explanation: "Inheritance enables a class to reuse properties and methods from another class." },
       { id: 3, question: "What is the process of bundling data (variables) and the methods that operate on the data into a single unit called?", options: ["Abstraction", "Polymorphism", "Encapsulation", "Inheritance"], correctAnswer: 2, explanation: "Encapsulation groups data and its related operations together." },
@@ -2022,7 +2022,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Access control, constructors, polymorphism, and related OOP concepts.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Total access specifiers in OOPS for C++ are?", options: ["2", "4", "3", "1"], correctAnswer: 2, explanation: "C++ has three access specifiers: private, public, and protected." },
       { id: 2, question: "Total instances of an abstract class that can be created?", options: ["None", "One", "Many", "Depends on compiler"], correctAnswer: 0, explanation: "You cannot instantiate an abstract class directly." },
       { id: 3, question: "Total types of constructors in C++ are?", options: ["Two", "Three", "Four", "One"], correctAnswer: 1, explanation: "Commonly: default, parameterized, and copy constructors." },
@@ -2051,7 +2051,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "OOP advanced concepts, operator/function overloading, memory, and design basics.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which of the following is not a type of inheritance?", options: ["Single", "Multiple", "Multilevel", "Distributed"], correctAnswer: 3, explanation: "'Distributed' is not a standard inheritance type in OOP nomenclature." },
       { id: 2, question: "Which of the following is not an OOPS concept?", options: ["Encapsulation", "Compilation", "Polymorphism", "Abstraction"], correctAnswer: 1, explanation: "Compilation is a build process, not an OOP concept." },
       { id: 3, question: "Who developed object-oriented programming?", options: ["Bjarne Stroustrup", "Dennis Ritchie", "Alan Kay", "James Gosling"], correctAnswer: 2, explanation: "Alan Kay is often credited with pioneering the OOP paradigm (Smalltalk)." },
@@ -2080,7 +2080,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Design principles, interfaces, and OOP best practices.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which SOLID principle is about substitutability of subtypes?", options: ["Single Responsibility", "Open/Closed", "Liskov Substitution", "Dependency Inversion"], correctAnswer: 2, explanation: "Liskov Substitution Principle ensures derived classes can substitute base classes." },
       { id: 2, question: "What does an interface define?", options: ["Implementation details", "A contract of method signatures", "Memory layout", "A constructor"], correctAnswer: 1, explanation: "Interfaces define method signatures (a contract) without implementation." },
       { id: 3, question: "Which keyword in Java prevents a class from being subclassed?", options: ["static", "sealed", "final", "private"], correctAnswer: 2, explanation: "'final' prevents further subclassing in Java." },
@@ -2109,7 +2109,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Language specifics, memory, operator overloading, and class mechanics.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which operator cannot be overloaded in C++?", options: ["+", "=", "::", "<<"], correctAnswer: 2, explanation: "The scope resolution operator '::' cannot be overloaded." },
       { id: 2, question: "What does RAII (Resource Acquisition Is Initialization) help manage?", options: ["Memory leaks using garbage collection", "Resource lifetime via constructors/destructors", "Network connections only", "User input"], correctAnswer: 1, explanation: "RAII ties resources to object lifetime using constructors/destructors for deterministic cleanup." },
       { id: 3, question: "Which is true about static members of a class?", options: ["Each instance has its own copy", "Shared among all instances", "Cannot be accessed outside class", "Always private"], correctAnswer: 1, explanation: "Static members are shared across all instances of a class." },
@@ -2138,7 +2138,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Networking fundamentals: purpose, topologies, basic protocols.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "What is the fundamental purpose of a computer network?", options: ["Sharing resources", "Storing data", "Performing calculations", "Enhancing security"], correctAnswer: 0, explanation: "Computer networks enable sharing of resources like files, printers, and services." },
       { id: 2, question: "Which topology does the Internet resemble?", options: ["Ring", "Bus", "Star", "Mesh"], correctAnswer: 3, explanation: "The Internet is best described as a mesh of interconnected networks." },
       { id: 3, question: "What type of network covers a large geographical area, like a city, country, or the world?", options: ["LAN", "MAN", "WAN", "PAN"], correctAnswer: 2, explanation: "WAN (Wide Area Network) covers large geographic areas such as countries or the world." },
@@ -2167,7 +2167,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Commands, OSI/TCP-IP layers, and basic troubleshooting.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which OSI layer is responsible for error detection and correction at the destination?", options: ["Transport", "Network", "Data Link", "Physical"], correctAnswer: 0, explanation: "Transport protocols (like TCP) provide end-to-end error detection and recovery at the destination." },
       { id: 2, question: "What does the TCP/IP model's Internet layer do?", options: ["Manages end-to-end data communication sessions", "Routes packets across networks", "Formats data packets", "Encodes and decodes data"], correctAnswer: 1, explanation: "The Internet layer (IP) routes packets across different networks." },
       { id: 3, question: "Which protocol operates at the Transport Layer of the OSI model to ensure reliable communication?", options: ["ICMP", "IP", "TCP", "UDP"], correctAnswer: 2, explanation: "TCP is a transport-layer protocol that provides reliable, connection-oriented communication." },
@@ -2196,7 +2196,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Ethernet, switching, MACs, and duplex/ports troubleshooting.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "What type of cable is used for most modern Ethernet networks?", options: ["Coaxial cable", "Fiber optic cable", "Twisted pair cable", "None of the above"], correctAnswer: 2, explanation: "Twisted pair (e.g., Cat5e/Cat6) is commonly used for Ethernet." },
       { id: 2, question: "What does the term 'full-duplex' mean in the context of Ethernet networking?", options: ["Data can be transmitted in one direction only", "Data can be transmitted in both directions, but not simultaneously", "Data can be transmitted in both directions simultaneously", "None of the above"], correctAnswer: 2, explanation: "Full-duplex allows simultaneous two-way communication." },
       { id: 3, question: "How does a switch determine the destination of an Ethernet frame?", options: ["By using the source IP address", "By using the destination MAC address", "By using the source MAC address", "By broadcasting to all ports except the source"], correctAnswer: 1, explanation: "Switches forward frames based on destination MAC addresses learned in the CAM table." },
@@ -2225,7 +2225,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "IPv4/IPv6, routing, BGP/OSPF basics and troubleshooting.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "What is the main difference between IPv4 and IPv6?", options: ["Address size", "Error detection mechanisms", "Encryption capabilities", "Transport layer integration"], correctAnswer: 0, explanation: "IPv6 uses larger (128-bit) addresses vs IPv4's 32-bit addresses." },
       { id: 2, question: "Which feature of IPv6 eliminates the need for NAT (Network Address Translation)?", options: ["Auto-configuration", "Built-in encryption", "The vast address space", "Multicast"], correctAnswer: 2, explanation: "IPv6's huge address space reduces the need for NAT." },
       { id: 3, question: "What is the function of an IP subnet mask?", options: ["To separate the network address from the host address", "To encrypt IP addresses", "To detect IP conflicts", "To assign IP addresses automatically"], correctAnswer: 0, explanation: "Subnet masks split an IP address into network and host portions." },
@@ -2254,7 +2254,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Routing algorithms, protocols, TCP/UDP behavior and troubleshooting.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "How does a distance-vector routing protocol determine the best route?", options: ["By counting hops", "By measuring latency", "By bandwidth", "By using a cost metric"], correctAnswer: 0, explanation: "Classic distance-vector protocols (e.g., RIP) use hop count as a metric." },
       { id: 2, question: "What is the primary benefit of using a routing protocol like EIGRP compared to RIP?", options: ["Faster convergence", "Higher security", "Simpler configuration", "Less bandwidth usage"], correctAnswer: 0, explanation: "EIGRP converges faster and has more advanced metrics than RIP." },
       { id: 3, question: "Which routing protocol is classified as an Exterior Gateway Protocol (EGP)?", options: ["OSPF", "EIGRP", "BGP", "RIP"], correctAnswer: 2, explanation: "BGP is an Exterior Gateway Protocol used between autonomous systems." },
@@ -2283,7 +2283,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Process scheduling basics and algorithms (FCFS, Round Robin).",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which scheduling algorithm assigns CPU to the process that arrives first?", options: ["Round Robin", "Shortest Job First", "First-Come, First-Served", "Priority Scheduling"], correctAnswer: 2, explanation: "FCFS schedules processes in the order they arrive." },
       { id: 2, question: "Which scheduling algorithm gives each process a fixed time slice called quantum?", options: ["Round Robin", "FCFS", "SJF", "Priority"], correctAnswer: 0, explanation: "Round Robin assigns a time quantum to each ready process in a cyclic order." },
       { id: 3, question: "What is a disadvantage of FCFS scheduling?", options: ["Starvation of short jobs", "High context switching", "Requires preemption", "Complex implementation"], correctAnswer: 0, explanation: "FCFS can cause long waiting times for short jobs (convoy effect)." },
@@ -2312,7 +2312,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Deadlocks: conditions, detection, prevention and avoidance.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which of the following is NOT one of the necessary conditions for a deadlock?", options: ["Mutual exclusion", "Hold and wait", "Preemption", "Circular wait"], correctAnswer: 2, explanation: "No preemption is a required condition; 'Preemption' being present would prevent deadlock." },
       { id: 2, question: "What is the circular wait condition?", options: ["Processes waiting for I/O", "A ring of processes each waiting for a resource held by the next", "A dead network loop", "Priority inversion"], correctAnswer: 1, explanation: "Circular wait is when processes form a cycle each waiting for a resource held by another in the cycle." },
       { id: 3, question: "Which algorithm is used to detect a deadlock in resource allocation graphs?", options: ["Banker's algorithm", "Cycle detection", "Dijkstra's algorithm", "Bellman-Ford"], correctAnswer: 1, explanation: "Cycle detection in the resource-allocation graph can reveal possible deadlocks." },
@@ -2341,7 +2341,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Memory management: paging, segmentation, virtual memory, TLB and page replacement.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "What is paging in memory management?", options: ["Dividing memory into fixed-size frames and processes into pages", "Dividing programs by function", "Allocating continuous memory blocks", "A type of file system"], correctAnswer: 0, explanation: "Paging divides physical memory into fixed-size frames and logical memory into pages." },
       { id: 2, question: "What problem does segmentation primarily address?", options: ["Fragmentation only", "Providing logical view of memory (modules/segments)", "Disk scheduling", "Process scheduling"], correctAnswer: 1, explanation: "Segmentation lets programs be organized into logically meaningful segments (code, stack, heap)." },
       { id: 3, question: "What is virtual memory?", options: ["Physical RAM only", "Disk storage used as extra RAM and an illusion of larger memory", "A type of CPU register", "A backup technique"], correctAnswer: 1, explanation: "Virtual memory allows processes to use more memory than physical RAM by paging to disk." },
@@ -2370,7 +2370,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Processes vs threads, multithreading, synchronization, context switching.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which statement is true about threads and processes?", options: ["Threads have separate memory spaces, processes share memory", "Threads are lighter weight and share the same process memory space", "Threads cannot run concurrently", "Processes are lighter than threads"], correctAnswer: 1, explanation: "Threads are lightweight and share process memory; processes have separate address spaces." },
       { id: 2, question: "What is the main benefit of multithreading?", options: ["Simpler code", "Better utilization of CPU and responsiveness", "Eliminates race conditions", "Removes need for synchronization"], correctAnswer: 1, explanation: "Multithreading improves CPU utilization and responsiveness but requires synchronization." },
       { id: 3, question: "What is context switching?", options: ["Switching CPU from user to kernel mode", "Saving/restoring CPU state to switch between processes or threads", "Copying files", "Allocating memory"], correctAnswer: 1, explanation: "Context switch saves and restores CPU state to switch execution between tasks." },
@@ -2399,7 +2399,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "File systems, I/O, MMU, system calls and file attributes.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Which component of an OS is primarily responsible for managing files?", options: ["File System Manager", "Memory Manager", "Process Manager", "Device Driver"], correctAnswer: 0, explanation: "The file system manager organizes and handles file operations on storage media." },
       { id: 2, question: "What is an inode in Unix-like file systems?", options: ["A network node", "A data structure storing file metadata", "A file name entry", "A protocol"], correctAnswer: 1, explanation: "An inode stores metadata like permissions, owner, timestamps and pointers to data blocks." },
       { id: 3, question: "Which technique improves file system reliability by recording intentions before applying changes?", options: ["Defragmentation", "Journaling", "Copy-on-write", "Caching"], correctAnswer: 1, explanation: "Journaling records changes in a log to help recover from crashes without corrupting file system." },
@@ -2428,7 +2428,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Basics of C: compilation, syntax, data types, and Hello World.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Why is learning programming important in today's world?", options: ["For academic purposes only", "To automate and solve complex problems", "Only for software development", "For entertainment purposes only"], correctAnswer: 1, explanation: "Programming helps automate tasks and solve complex problems across domains." },
       { id: 2, question: "What is the main function of a compiler in programming?", options: ["To write code", "To interpret code", "To convert code into machine language", "To debug code"], correctAnswer: 2, explanation: "A compiler translates source code into machine language executable by the CPU." },
       { id: 3, question: "Which of the following is true about interpreters?", options: ["They execute programs faster than compilers", "They translate the entire program at once", "They translate and execute code line by line", "They are not used in modern programming"], correctAnswer: 2, explanation: "Interpreters translate and run code line-by-line at runtime." },
@@ -2457,7 +2457,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Input/output, operators, precedence, and basic expressions in C.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "What is the purpose of the printf function in C?", options: ["To read input", "To print output", "To perform calculations", "To control program flow"], correctAnswer: 1, explanation: "printf() is used to write formatted output to stdout." },
       { id: 2, question: "What does %d signify in the printf or scanf function?", options: ["Double data type", "Decimal integer", "Dynamic allocation", "Directory path"], correctAnswer: 1, explanation: "%d is the format specifier for signed decimal integers." },
       { id: 3, question: "What will be the output of the following C code?\nint main() {\nprintf(\"%d\", 500);\nreturn 0;\n}", options: ["500", "%d", "Syntax Error", "None of these"], correctAnswer: 0, explanation: "Printing an integer literal with %d displays that integer." },
@@ -2486,7 +2486,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Control flow, loops, functions, recursion, and common C constructs.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "What will the following C code print?\nint main() {\nfor(int i = 0; i < 3; i++)\n{ printf(\"%d \", i); }\nreturn 0;\n}", options: ["0 1 2", "1 2 3", "0 1 2 3", "1 2 3 4"], correctAnswer: 0, explanation: "Loop prints 0,1,2 then exits." },
       { id: 2, question: "What does this C code do?\nint main()\n{ int i = 0;\nwhile(i < 5) { if(i == 2) break;\nprintf(\"%d \", i); i++; }\nreturn 0;\n}", options: ["Prints 0 1 2", "Prints 0 1", "Prints all numbers less than 5", "Prints nothing"], correctAnswer: 1, explanation: "When i==2, break exits the loop; output is 0 1." },
       { id: 3, question: "What is the output of the following C code?\nint main() {\nint x = 0; do {\nprintf(\"%d \", x);\nx++;\n} while(x < 3);\nreturn 0;\n}", options: ["0 1 2", "0 1", "1 2 3", "No output"], correctAnswer: 0, explanation: "do-while executes body then checks condition; outputs 0 1 2." },
@@ -2515,7 +2515,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "OOP basics: objects, classes, encapsulation, polymorphism and related concepts.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "What is an object in object-oriented programming?", options: ["A code snippet", "A variable", "An instance of a class", "A function"], correctAnswer: 2, explanation: "An object is a concrete instance created from a class blueprint." },
       { id: 2, question: "Which of the following is a feature of procedure-oriented programming?", options: ["Class-based", "Focus on functions", "Inheritance", "Polymorphism"], correctAnswer: 1, explanation: "Procedure-oriented programming emphasizes procedures or functions to operate on data." },
       { id: 3, question: "In OOP, what does encapsulation refer to?", options: ["Storing data in arrays", "The process of inheritance", "Combining data and methods", "A type of loop"], correctAnswer: 2, explanation: "Encapsulation bundles data and the methods that operate on that data together and hides internal state." },
@@ -2544,7 +2544,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Operators, expressions, I/O, and basic syntax rules in C++.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "Spot the error in this C++ code: const int num; num = 10; cout << num;", options: ["Missing variable initialization", "Incorrect use of const", "Syntax error in cout statement", "No error"], correctAnswer: 0, explanation: "A const variable must be initialized at declaration time; assigning later is invalid." },
       { id: 2, question: "What is the output of the expression 5 + 3 * 2 in C++?", options: ["16", "11", "10", "8"], correctAnswer: 1, explanation: "Multiplication has higher precedence: 3*2=6; 5+6=11." },
       { id: 3, question: "Which operator is used for logical AND in C++?", options: ["&&", "&", "||", "=="], correctAnswer: 0, explanation: "'&&' is the logical AND operator; '&' is bitwise AND." },
@@ -2573,7 +2573,7 @@ export const interviewDatabase = [
     attempts: 0,
     description: "Control flow, loops, functions, recursion, prototypes, and arrays in C++.",
     reviews: [],
-    mcqQuestions: [
+    questionsList: [
       { id: 1, question: "What is the purpose of the if statement in C++?", options: ["To execute a block of code multiple times", "To stop the execution of the program", "To make a decision", "To declare a variable"], correctAnswer: 2, explanation: "if evaluates a condition and executes code selectively." },
       { id: 2, question: "Which control flow statement is used for executing a block of code repeatedly based on a condition?", options: ["if", "else", "for", "switch"], correctAnswer: 2, explanation: "for (and while) loops execute blocks repeatedly based on conditions." },
       { id: 3, question: "What is the function of the break statement in a loop?", options: ["To pause the loop", "To skip an iteration of the loop", "To terminate the loop", "To continue to the next iteration of the loop"], correctAnswer: 2, explanation: "break exits the nearest loop immediately." },
@@ -2602,7 +2602,7 @@ export const interviewDatabase = [
     attempts: 22000,
     description: "Number systems and binary arithmetic MCQs for technical rounds.",
     reviews: [{ name: "CS Student", imageSrc: "https://randomuser.me/api/portraits/women/15.jpg", text: "Great for number system concepts." }],
-    mcqQuestions: [
+    questionsList: [
       {
         id: 1,
         question: "What is the base of the binary number system?",
@@ -2726,7 +2726,7 @@ export const interviewDatabase = [
     attempts: 28000,
     description: "Operating systems and software concepts MCQs for technical interviews.",
     reviews: [{ name: "Placement Prep", imageSrc: "https://randomuser.me/api/portraits/men/25.jpg", text: "Essential OS concepts covered well." }],
-    mcqQuestions: [
+    questionsList: [
       {
         id: 1,
         question: "What is the main purpose of an operating system?",
@@ -2885,7 +2885,7 @@ export const interviewDatabase = [
     attempts: 31000,
     description: "Computer networks and web technologies MCQs for technical rounds.",
     reviews: [{ name: "Network Student", imageSrc: "https://randomuser.me/api/portraits/women/22.jpg", text: "Good coverage of networking basics." }],
-    mcqQuestions: [
+    questionsList: [
       {
         id: 1,
         question: "What is the primary function of a router in a network?",
@@ -3064,7 +3064,7 @@ export const interviewDatabase = [
     attempts: 19000,
     description: "Programming concepts and security fundamentals MCQs for technical interviews.",
     reviews: [{ name: "Coding Enthusiast", imageSrc: "https://randomuser.me/api/portraits/men/30.jpg", text: "Perfect mix of programming and security topics." }],
-    mcqQuestions: [
+    questionsList: [
       {
         id: 1,
         question: "Which of the following is the correct syntax for a basic print command in Python?",

@@ -90,7 +90,7 @@ function Page() {
       <div className="w-full max-w-sm mx-auto">
         <div className="text-center mb-6">
           <Image
-            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
+            src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png?updatedAt=1767107537559"
             alt="Logo"
             width={210}
             height={210}
