@@ -22,7 +22,7 @@ import { lineNumbers } from "@codemirror/view";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { IoPlay } from "react-icons/io5";
 
-function CodingEnvironment({ questionsList, testdetails, onBack }) {
+function CodingEnvironment({ questionsList, testdetails, onBack, skipVerification = false }) {
   const params = useParams();
   const router = useRouter();
   const [loading, setLoading] = useState<boolean>(true);
@@ -91,6 +91,11 @@ function CodingEnvironment({ questionsList, testdetails, onBack }) {
 
   useEffect(() => {
     const verifyAccess = async () => {
+      if (skipVerification) {
+        setVerified(true);
+        setLoading(false);
+        return;
+      }
       try {
         const rawEmail = params?.email || params?.challengeId || params?.[2];
         const email = rawEmail ? decodeURIComponent(Array.isArray(rawEmail) ? rawEmail[0] : rawEmail) : null;
@@ -270,32 +275,17 @@ function CodingEnvironment({ questionsList, testdetails, onBack }) {
   };
 
   const handleLanguageChange = (lang) => {
-    if (!verified) {
-      router.push('/challenges');
-      return;
-    }
-    
     saveCurrentCode();
     setSelectedLang(lang);
   };
 
   const handleCodeChange = (value) => {
-    if (!verified) {
-      router.push('/challenges');
-      return;
-    }
-    
     setCode(value);
     const key = `q${currentQuestion}_${selectedLang}`;
     setSavedCodes((prev) => ({ ...prev, [key]: value }));
   };
 
   const runCode = async () => {
-    if (!verified) {
-      router.push('/challenges');
-      return;
-    }
-    
     if (!code.trim()) {
       setOutput("Please write some code first!");
       return;
@@ -1047,7 +1037,7 @@ const questionsWithCode = localQuestionsList.map((question, index) => {
 
 
 const result = await submitCodeForAnalysis(
-  challengeID,
+  challengeId,
   roundNumber,
   questionsWithCode
 );

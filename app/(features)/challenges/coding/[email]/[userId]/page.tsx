@@ -10,6 +10,7 @@ function CodingRound() {
     questionsList={[]}
     testdetails={{}}
     onBack={() => router.back()}
+    skipVerification={true}
   />;
 }
 
