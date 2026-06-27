@@ -81,20 +81,20 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenu className="space-y-3 mt-8">
                 {section.items.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                      <SidebarMenuButton 
-                        asChild 
-                        isActive={item.isActive} 
-                        className="text-white hover:bg-gray-800 text-lg py-3"
-                        onClick={item.title === "Logout" ? () => {
-                          localStorage.clear();
-                          sessionStorage.clear();
-                          document.cookie.split(";").forEach(function(c) { 
-                            document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
-                          });
-                          alert('Successfully logged out!');
-                          window.location.href = '/login';
-                        } : undefined}
-                      >
+                    <SidebarMenuButton
+                      asChild
+                      isActive={item.isActive}
+                      className="text-white hover:bg-gray-800 text-lg py-3"
+                      onClick={item.title === "Logout" ? () => {
+                        localStorage.clear();
+                        sessionStorage.clear();
+                        document.cookie.split(";").forEach(function (c) {
+                          document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+                        });
+                        alert('Successfully logged out!');
+                        window.location.href = '/login';
+                      } : undefined}
+                    >
                       <a href={item.url} className="flex items-center gap-3">
                         <item.icon className="w-6 h-6" />
                         <span className="text-lg">{item.title}</span>
@@ -106,7 +106,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
-        
+
         <div className="p-2 mt-auto">
           <div className="w-full h-40 rounded-xl overflow-hidden mb-3">
             <iframe
@@ -120,7 +120,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="rounded-xl"
             ></iframe>
           </div>
-          
+
           <div className="text-center mb-2">
             <span className="text-gray-400 text-sm">Socials</span>
             <hr className="border-gray-600 mt-1" />

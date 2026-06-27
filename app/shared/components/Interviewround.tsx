@@ -168,7 +168,7 @@ const submitAnswer = async (answer) => {
     );
 
     const config = interviewApiService.getRoundConfig(currentRoundType);
-    const result = await interviewApiService.submitAnswer(requestData, config.submitEndpoint);
+    const result = await interviewApiService.submitAnswer(requestData, config.endpoint);
 
     if (result.success) {
       const interviewEntry = interviewApiService.createInterviewEntry(

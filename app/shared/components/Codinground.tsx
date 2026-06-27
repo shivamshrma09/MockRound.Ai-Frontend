@@ -124,8 +124,8 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
         const userCode = savedCodes[codeKey] || question.defaultCode?.find(dc => dc.language === selectedLang)?.code || '';
         
         return {
-          question: question.title,
-          user_code: userCode,
+          question: question.title || question.question || 'Unknown Question',
+          user_code: userCode.trim() || `// No code submitted for this question`,
           correct_solution: question.solution || '',
           language: selectedLang.toLowerCase(),
           difficulty: question.difficulty?.toLowerCase() || 'medium'
@@ -133,7 +133,7 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
       });
       
       const user = JSON.parse(localStorage.getItem('user') || '{}');
-      const userId = user._id;
+      const userId = user.id || user._id;
       
       if (userId) {
         await submitCodeForAnalysis(submissions, userId);
@@ -558,12 +558,12 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
               : "w-2/5 border-r border-[#191919] flex flex-col"
           }
         >
-          <div className="flex border-b border-[#191919]">
+          <div className="flex border-b border-[#1f1f1f] bg-[#090909] px-2 sticky top-0 z-10">
             <button
               onClick={() => setActiveTab("description")}
-              className={`px-4 py-2 text-sm ${
+              className={`px-4 py-3 text-sm font-semibold transition-all relative ${
                 activeTab === "description"
-                  ? "text-[#d97757]"
+                  ? "text-[#d97757] border-b-2 border-[#d97757]"
                   : "text-gray-400 hover:text-white"
               }`}
             >
@@ -571,9 +571,9 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
             </button>
             <button
               onClick={() => setActiveTab("testcases")}
-              className={`px-4 py-2 text-sm ${
+              className={`px-4 py-3 text-sm font-semibold transition-all relative ${
                 activeTab === "testcases"
-                  ? "text-[#d97757]"
+                  ? "text-[#d97757] border-b-2 border-[#d97757]"
                   : "text-gray-400 hover:text-white"
               }`}
             >
@@ -581,9 +581,9 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
             </button>
             <button
               onClick={() => setActiveTab("results")}
-              className={`px-4 py-2 text-sm ${
+              className={`px-4 py-3 text-sm font-semibold transition-all relative ${
                 activeTab === "results"
-                  ? "text-[#d97757]"
+                  ? "text-[#d97757] border-b-2 border-[#d97757]"
                   : "text-gray-400 hover:text-white"
               }`}
             >
@@ -592,17 +592,17 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
           </div>
 
           <div
-            className="h-full p-4 text-white overflow-y-scroll"
+            className="h-full p-6 text-white overflow-y-scroll bg-[#030303]"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {activeTab === "description" && (
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <h2 className="text-xl font-bold">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <h2 className="text-2xl font-bold tracking-tight">
                     {getCurrentQuestion()?.title || "Problem Title"}
                   </h2>
                   <span
-                    className={`px-2 py-1 rounded text-xs font-medium ${getDifficultyColor(
+                    className={`px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${getDifficultyColor(
                       getCurrentQuestion()?.difficulty
                     )}`}
                   >
@@ -610,7 +610,7 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
                   </span>
                 </div>
 
-                <p className="mb-6 text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed text-[15px]">
                   {getCurrentQuestion()?.description ||
                     "Problem description will appear here..."}
                 </p>
@@ -618,24 +618,28 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
                 {getCurrentQuestion()?.examples && (
                   <div className="space-y-4">
                     {getCurrentQuestion().examples.map((example, index) => (
-                      <div key={index} className="p-4 rounded-lg">
-                        <p className="font-semibold text-[#d97757] mb-2">
+                      <div key={index} className="bg-[#0b0b0b] border border-[#1a1a1a] rounded-xl p-5 shadow-inner hover:border-[#2d2d2d] transition-all">
+                        <p className="font-bold text-[#d97757] text-sm uppercase tracking-wider mb-3">
                           Example {index + 1}:
                         </p>
-                        <div className="space-y-1 text-sm">
-                          <p>
-                            <span className="font-medium">Input:</span>{" "}
-                            {example.input}
-                          </p>
-                          <p>
-                            <span className="font-medium">Output:</span>{" "}
-                            {example.output}
-                          </p>
+                        <div className="space-y-2 text-[14px]">
+                          <div className="flex items-start gap-2">
+                            <span className="text-gray-500 font-medium w-16 select-none">Input:</span>
+                            <code className="text-gray-200 font-mono bg-[#161616] px-2 py-0.5 rounded border border-[#262626]">
+                              {example.input}
+                            </code>
+                          </div>
+                          <div className="flex items-start gap-2">
+                            <span className="text-gray-500 font-medium w-16 select-none">Output:</span>
+                            <code className="text-gray-200 font-mono bg-[#161616] px-2 py-0.5 rounded border border-[#262626]">
+                              {example.output}
+                            </code>
+                          </div>
                           {example.explanation && (
-                            <p>
-                              <span className="font-medium">Explanation:</span>{" "}
-                              {example.explanation}
-                            </p>
+                            <div className="flex items-start gap-2 pt-1 border-t border-[#161616] mt-2">
+                              <span className="text-gray-500 font-medium w-16 select-none">Explain:</span>
+                              <span className="text-gray-400">{example.explanation}</span>
+                            </div>
                           )}
                         </div>
                       </div>
@@ -644,16 +648,16 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
                 )}
 
                 {getCurrentQuestion()?.constraints && (
-                  <div className="mt-6">
-                    <h4 className="font-semibold mb-3 text-[#d97757]">
+                  <div className="pt-4 border-t border-[#1a1a1a]">
+                    <h4 className="font-semibold text-[#d97757] text-sm uppercase tracking-wider mb-3">
                       Constraints:
                     </h4>
-                    <ul className="space-y-1 text-sm text-gray-300">
+                    <ul className="space-y-2 text-sm text-gray-400 font-mono">
                       {getCurrentQuestion().constraints.map(
                         (constraint, index) => (
-                          <li key={index} className="flex items-start">
-                            <span className="text-[#d97757] mr-2">•</span>
-                            {constraint}
+                          <li key={index} className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#d97757]" />
+                            <span>{constraint}</span>
                           </li>
                         )
                       )}
@@ -665,87 +669,127 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
 
             {activeTab === "testcases" && (
               <div>
-                <h3 className="text-lg font-bold mb-4">Test Cases</h3>
-                <div className="space-y-3">
+                <h3 className="text-xl font-bold mb-4 tracking-tight">Test Cases</h3>
+                <div className="space-y-4">
                   {getCurrentQuestion()?.testCases?.map((testCase, index) => (
-                   
-                    <div key={index} className={index <= 2? "p-3 rounded" : "hidden"} >
-                      <p className="font-semibold text-[#d97757] mb-2">
+                    <div key={index} className={`bg-[#0b0b0b] border border-[#1a1a1a] rounded-xl p-5 ${index <= 2 ? "block" : "hidden"}`} >
+                      <p className="font-bold text-[#d97757] text-sm uppercase tracking-wider mb-3">
                         Test Case {index + 1}:
                       </p>
-                      <p className="text-sm">
-                        <span className="font-medium">Input:</span>{" "}
-                        {testCase.input}
-                      </p>
-                      <p className="text-sm">
-                        <span className="font-medium">Expected:</span>{" "}
-                        {testCase.expected}
-                      </p>
+                      <div className="space-y-2 text-[14px]">
+                        <div className="flex items-start gap-2">
+                          <span className="text-gray-500 font-medium w-18 select-none">Input:</span>
+                          <code className="text-gray-200 font-mono bg-[#161616] px-2 py-0.5 rounded border border-[#262626] break-all">
+                            {testCase.input}
+                          </code>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-gray-500 font-medium w-18 select-none">Expected:</span>
+                          <code className="text-gray-200 font-mono bg-[#161616] px-2 py-0.5 rounded border border-[#262626] break-all">
+                            {testCase.expected}
+                          </code>
+                        </div>
+                      </div>
                     </div>
-                  )) || <p>No test cases available</p>}
+                  )) || <p className="text-gray-400">No test cases available</p>}
                 </div>
               </div>
             )}
 
             {activeTab === "results" && (
               <div>
-                <h3 className="text-lg font-bold mb-4">Test Results</h3>
+                <h3 className="text-xl font-bold mb-4 tracking-tight">Test Results</h3>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2.5 mb-6">
                   {getCurrentQuestion()?.testCases?.map((test, idx) => {
                     if(idx >= 3) {
-                        return 
+                        return null;
                     }
                     const currentResults = getCurrentTestResults();
                     const result = currentResults.find(r => r.caseNumber === idx + 1);
+                    const isPassed = result?.isCorrect;
+                    
                     return (
                       <button 
-                        className={`px-3 py-1 rounded-full  text-sm font-medium transition-colors
-                           ${selectedTestCase === idx + 1 ? 'bg-[#d6876c]' : 'bg-black'}` }
+                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all border flex items-center gap-2
+                           ${selectedTestCase === idx + 1 
+                             ? 'bg-[#d97757]/15 border-[#d97757] text-[#d97757] shadow-lg shadow-[#d97757]/5' 
+                             : 'bg-[#0b0b0b] border-[#1a1a1a] text-gray-400 hover:border-[#d97757]/30 hover:text-white'}` }
                         key={idx} 
                         onClick={() => setSelectedTestCase(idx + 1)}
                       >
-                        Case {idx + 1} {result?.isCorrect ? '✅' : result ? '❌' : ''}
+                        <span>Case {idx + 1}</span>
+                        {result && (
+                          <span className={isPassed ? 'text-emerald-400' : 'text-rose-400'}>
+                            {isPassed ? '✅' : '❌'}
+                          </span>
+                        )}
                       </button>
                     );
                   }) || <p className="text-gray-400">No test cases available</p>}
                 </div>
 
                 {selectedTestCase && getCurrentTestResults().length > 0 && (
-                  <div className=" rounded-lg p-4 border border-gray-700">
+                  <div className="bg-[#0b0b0b] border border-[#1a1a1a] rounded-xl p-5 shadow-2xl">
                     {(() => {
                       const currentResults = getCurrentTestResults();
                       const result = currentResults.find(r => r.caseNumber === selectedTestCase);
-                      if (!result) return <p className="text-gray-400">No result found</p>;
+                      if (!result) return <p className="text-gray-400 text-center py-4">No result found</p>;
+                      const isPassed = result.isCorrect;
                       
                       return (
-                        <div className="space-y-3">
-                          <div className="flex items-center justify-between">
-                            <span className='px-2 py-1 rounded text-sm font-medium'>
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between pb-3 border-b border-[#1a1a1a]">
+                            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Status</span>
+                            <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                              isPassed 
+                                ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' 
+                                : 'bg-rose-500/10 text-rose-400 border border-rose-500/20'
+                            }`}>
+                              {isPassed ? 'Passed' : 'Failed'}
                             </span>
                           </div>
                           
-                          <div className="space-y-2 text-sm">
+                          <div className="space-y-3.5 text-[14px]">
                             <div>
-                              <span className="text-gray-500 font-medium">Input:</span>
-                              <div className="text-white p-2 rounded mt-1 font-mono">
+                              <div className="flex justify-between items-center mb-1">
+                                <span className="text-gray-500 font-medium">Input:</span>
+                              </div>
+                              <div className="text-gray-200 bg-[#161616] p-3 rounded-lg border border-[#222] font-mono text-xs overflow-x-auto">
                                 {result.input}
                               </div>
                             </div>
                             
                             <div>
-                              <span className="text-gray-500 font-medium">Output:</span>
-                              <div className="p-2 rounded mt-1 font-mono text-white">
-                                {result.output}
+                              <div className="flex justify-between items-center mb-1">
+                                <span className="text-gray-500 font-medium">Output:</span>
+                              </div>
+                              <div className={`p-3 rounded-lg border font-mono text-xs overflow-x-auto ${
+                                isPassed 
+                                  ? 'bg-[#161616] border-[#222] text-emerald-400' 
+                                  : 'bg-[#1c1214] border-rose-900/30 text-rose-400'
+                              }`}>
+                                {result.output || "No output"}
                               </div>
                             </div>
                             
                             <div>
-                              <span className="text-gray-500 font-medium">Expected:</span>
-                              <div className="p-2 rounded mt-1 font-mono text-white">
+                              <div className="flex justify-between items-center mb-1">
+                                <span className="text-gray-500 font-medium">Expected:</span>
+                              </div>
+                              <div className="text-gray-200 bg-[#161616] p-3 rounded-lg border border-[#222] font-mono text-xs overflow-x-auto">
                                 {result.expected}
                               </div>
                             </div>
+
+                            {result.error && (
+                              <div className="pt-2">
+                                <span className="text-rose-400 font-semibold text-xs uppercase tracking-wider">Error Output:</span>
+                                <div className="mt-1 bg-rose-950/20 border border-rose-900/40 text-rose-300 p-3 rounded-lg font-mono text-xs overflow-x-auto whitespace-pre-wrap">
+                                  {result.error}
+                                </div>
+                              </div>
+                            )}
                           </div>
                         </div>
                       );
@@ -754,11 +798,15 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
                 )}
                 
                 {!selectedTestCase && getCurrentTestResults().length > 0 && (
-                  <p className="text-gray-400 text-center py-8">Click on a test case button to view details</p>
+                  <div className="text-center py-12 border border-dashed border-[#222] rounded-xl bg-[#070707]">
+                    <p className="text-gray-400">Click on a test case tab to view detailed input/output comparison.</p>
+                  </div>
                 )}
                 
                 {getCurrentTestResults().length === 0 && (
-                  <p className="text-gray-400 text-center py-8">Run your code to see test results</p>
+                  <div className="text-center py-12 border border-dashed border-[#222] rounded-xl bg-[#070707]">
+                    <p className="text-gray-400">Run your code to execute and view test results here.</p>
+                  </div>
                 )}
               </div>
             )}
@@ -841,8 +889,8 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
                       const userCode = savedCodes[codeKey] || question.defaultCode?.find(dc => dc.language === selectedLang)?.code || '';
                       
                       return {
-                        question: question.title ,
-                        user_code: userCode,
+                        question: question.title || question.question || 'Unknown Question',
+                        user_code: userCode.trim() || `// No code submitted for this question`,
                         correct_solution: question.solution || '',
                         language: selectedLang.toLowerCase(),
                         difficulty: question.difficulty?.toLowerCase() || 'medium'
@@ -850,7 +898,7 @@ function CodingEnviorment({ questionsList, onBack, testdetails }) {
                     });
                     
                     const user = JSON.parse(localStorage.getItem('user') || '{}');
-                    const userId = user._id;
+                    const userId = user.id || user._id;
                     
                     if (!userId) {
                       alert('Please login to get detail analysis.');

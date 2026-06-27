@@ -49,14 +49,20 @@ function Page({ questionsList, onBack, testdetails }) {
 
   
 
+  const [timerStarted, setTimerStarted] = useState(false);
+
   useEffect(() => {
     if (timeLeft > 0) {
       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
       return () => clearTimeout(timer);
-    } else if (timeLeft === 0 && isMounted && !isSubmitting) {
+    } else if (timeLeft === 0 && isMounted && timerStarted && !isSubmitting) {
       handleSubmit();
     }
-  }, [timeLeft, isMounted, isSubmitting]);
+  }, [timeLeft, isMounted, timerStarted, isSubmitting]);
+
+  useEffect(() => {
+    if (assessmentStarted) setTimerStarted(true);
+  }, [assessmentStarted]);
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -114,7 +120,7 @@ function Page({ questionsList, onBack, testdetails }) {
           answer: selectedAnswers[index] !== undefined ? question.options[selectedAnswers[index]] : 'Not Answered',
           isright: selectedAnswers[index] === question.correctAnswer,
           rightanswer: question.options[question.correctAnswer] || 'Answer not available',
-          explanation: question.explanation || ''
+          explainantion: question.explanation || ''
         }))
       };
 

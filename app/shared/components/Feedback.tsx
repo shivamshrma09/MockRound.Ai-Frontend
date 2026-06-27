@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import sendfeedback from '../services/feedbacksend'
+import { IoClose } from "react-icons/io5";
 
-function Feedback() {
+interface FeedbackProps {
+  onClose?: () => void;
+}
+
+function Feedback({ onClose }: FeedbackProps) {
   const [feedback, setFeedback] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -13,6 +18,7 @@ function Feedback() {
       await sendfeedback(feedback)
       setFeedback('')
       alert('Feedback submitted successfully!')
+      if (onClose) onClose()
     } catch (error) {
       alert('Failed to submit feedback')
     } finally {
@@ -21,19 +27,26 @@ function Feedback() {
   }
 
   return (
-    <div className='w-80 lg:w-96  relative h-auto bg-[#000000]/40 flex rounded-xl flex-col items-center border border-1 border-white z-10 p-6'>
-        <h2  className='text-xl mb-3 text-center text-white font-bold'>Give your valuable feedback</h2>
-        <input 
-          type="text" 
+    <div className='w-80 lg:w-96 relative h-auto bg-neutral-950 border border-neutral-800 shadow-2xl flex rounded-2xl flex-col items-center z-50 p-6'>
+        {onClose && (
+          <button 
+            onClick={onClose}
+            className="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors"
+          >
+            <IoClose className="text-xl" />
+          </button>
+        )}
+        <h2 className='text-lg mb-4 text-center text-white font-bold'>Give your valuable feedback</h2>
+        <textarea 
           value={feedback}
           onChange={(e) => setFeedback(e.target.value)}
-          className='w-full h-20 bg-black border border-neutral-500 p-3 m-2 focus:border-white rounded-md text-gray-200' 
-          placeholder='Feedback..' 
+          className='w-full h-24 bg-neutral-900 border border-neutral-800 p-3 mb-2 focus:border-[#d97757] focus:ring-1 focus:ring-[#d97757]/30 rounded-xl text-white placeholder-neutral-500 focus:outline-none transition-all duration-300 resize-none' 
+          placeholder='Type your feedback here...' 
         />
         <button 
           onClick={handleSubmit}
           disabled={isSubmitting}
-          className='bg-[#9d300b] relative -top-2 font-bold text-white px-4 py-2 rounded-md mt-4 hover:bg-[#f35a27] disabled:opacity-50'
+          className='w-full bg-[#d97757] hover:bg-[#c86a47] font-bold text-white py-2.5 px-4 rounded-xl mt-4 transition-all duration-300 disabled:opacity-50 shadow-lg shadow-[#d97757]/10 hover:shadow-[#d97757]/20'
         >
           {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
         </button>

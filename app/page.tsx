@@ -60,6 +60,56 @@ const slideInLeft = {
   transition: { duration: 0.6 },
 };
 
+interface TestimonialItem {
+  name: string;
+  role: string;
+  text: string;
+  photo: string;
+  thumbnail: string;
+}
+
+const ResultCard = ({ item }: { item: TestimonialItem }) => {
+  return (
+    <motion.div
+      className="flex flex-col w-[320px] h-[440px] bg-neutral-950/80 border border-neutral-800 rounded-xl shadow-xl overflow-hidden snap-center min-w-[320px]"
+      whileHover={{ y: -5, borderColor: "#d97757", boxShadow: "0 10px 30px -10px rgba(217, 119, 87, 0.3)" }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Top Text / Avatar Section */}
+      <div className="p-4 flex-1 flex flex-col justify-center">
+        <div className="flex items-center gap-2.5 mb-2.5">
+          <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border border-neutral-700 bg-neutral-900">
+            <img
+              src={item.photo}
+              alt={item.name}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="min-w-0">
+            <h2 className="text-white font-bold text-sm truncate">{item.name}</h2>
+            <p className="text-[#d97757] text-[10px] font-semibold truncate">@{item.role}</p>
+          </div>
+        </div>
+        <p className="text-neutral-300 text-xs leading-relaxed line-clamp-3">
+          "{item.text}"
+        </p>
+      </div>
+
+      {/* Bottom Large Video Section */}
+      <div className="h-[280px] w-full relative overflow-hidden bg-black border-t border-neutral-900">
+        <video
+          src="https://ik.imagekit.io/qwzhnpeqg/clideo_editor_56411e8cf2504c3a88f3c2ad62142ff3.mp4?updatedAt=1782100250581"
+          poster={item.thumbnail}
+          controls
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </motion.div>
+  );
+};
+
 function page() {
   const [email, setEmail] = useState("");
   const [currentStep, setCurrentStep] = useState(0);
@@ -414,7 +464,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/testetmpplet.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-22%20091545.png"
                   alt="Home Dashboard"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -447,7 +497,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/intevriewchallnages.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20121006.png"
                   alt="Coding Challenges"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -476,7 +526,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/post.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20115706.png?updatedAt=1782541677545"
                   alt="Discussion Forum"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -508,7 +558,7 @@ function page() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/mentor.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20115741.png?updatedAt=1782541679668"
                   alt="1:1 Mentor"
                   fill
                   className="object-fill border-6 border-[#dfa491] rounded-xl "
@@ -517,7 +567,7 @@ function page() {
             </motion.div>
 
             <motion.div
-              className="rounded-xl p-6 group lg:flex lg:items-center lg:gap-19"
+              className="rounded-xl p-6 group lg:flex lg:items-center lg:gap-15"
               variants={slideInLeft}
               initial="initial"
               whileInView="whileInView"
@@ -533,14 +583,14 @@ function page() {
                 </p>
               </div>
               <motion.div
-                className="relative h-64 lg:h-96 lg:w-200 overflow-hidden"
+                className="relative h-64 lg:h-96 lg:w-230 overflow-hidden"
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/aimock.png"
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20121221.png"
                   alt="Create Interview"
                   fill
-                  className="object-fill border-6 border-[#dfa491] rounded-xl "
+                  className=" border-6 border-[#dfa491] rounded-xl "
                 />
               </motion.div>
             </motion.div>
@@ -588,14 +638,13 @@ function page() {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            <iframe
-              src="https://www.youtube.com/embed/MYYeCneMpKE"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="relative w-full h-56 md:h-72 lg:h-80 xl:h-96 rounded-xl shadow-2xl border border-gray-800"
-            ></iframe>
+            <video
+              src="https://ik.imagekit.io/qwzhnpeqg/clideo_editor_56411e8cf2504c3a88f3c2ad62142ff3.mp4?updatedAt=1782100250581"
+              poster="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-22%20082034.png"
+              controls
+              playsInline
+              className="relative w-full h-56 md:h-72 lg:h-80 xl:h-96 rounded-xl shadow-2xl border border-gray-800 object-cover"
+            />
           </motion.div>
           0
         </motion.div>
@@ -762,13 +811,13 @@ function page() {
 
 
 
-<div className="w-full px-4 py-20">
+<div className="w-full max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-20">
   <div className="text-center mb-16">
     <motion.h3 className="text-3xl lg:text-5xl font-bold text-white mb-4" variants={fadeInUp}>
       Results
     </motion.h3>
-    <motion.p 
-      className="text-neutral-400 text-lg max-w-2xl mx-auto" 
+    <motion.p
+      className="text-neutral-400 text-lg max-w-2xl mx-auto"
       variants={fadeInUp}
       transition={{ delay: 0.1 }}
     >
@@ -776,145 +825,43 @@ function page() {
     </motion.p>
   </div>
 
-  <div className="  p-1 rounded-xl">
-    <div className="flex flex-row gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory scroll-smooth">
-      
-      <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
-        <div className="w-1/2 h-full">
-          <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white font-bold">Shivam Sharma</h2>
-          <p className="text-neutral-500 text-sm">@Google SDE-2</p>
-          <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Cracked Google SDE-2 after 3 months! AI mock interviews helped me practice real scenarios.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
-        <div className="w-1/2 h-full">
-          <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white font-bold">Priya Singh</h2>
-          <p className="text-neutral-500 text-sm">@Microsoft SDE-1</p>
-          <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            MockRound.AI's mentorship program was game-changing. Got my dream job at Microsoft!
-          </p>
-        </div>
-      </div>
-
-      <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
-        <div className="w-1/2 h-full">
-          <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white font-bold">Rahul Gupta</h2>
-          <p className="text-neutral-500 text-sm">@Amazon SDE-3</p>
-          <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Test templates saved me weeks of prep time. Cleared Amazon's coding rounds easily.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
-        <div className="w-1/2 h-full">
-          <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white font-bold">Anita Patel</h2>
-          <p className="text-neutral-500 text-sm">@Meta Frontend</p>
-          <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Interview challenges boosted my confidence. Now working at Meta as Frontend Engineer!
-          </p>
-        </div>
-      </div>
-
-      <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
-        <div className="w-1/2 h-full">
-          <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white font-bold">Vikash Kumar</h2>
-          <p className="text-neutral-500 text-sm">@Flipkart SDE-2</p>
-          <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            1:1 mentorship was incredible. My mentor guided me through system design interviews.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
-        <div className="w-1/2 h-full">
-          <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white font-bold">Sneha Reddy</h2>
-          <p className="text-neutral-500 text-sm">@Uber Backend</p>
-          <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            Discussion forum helped me learn from others' experiences. Landed Uber backend role!
-          </p>
-        </div>
-      </div>
-
-      <div className="flex w-[300px] h-52 bg-black border-3 border-neutral-500 rounded-xl shadow-xl overflow-hidden snap-center min-w-[300px]">
-        <div className="w-1/2 h-full">
-          <iframe
-            src="https://www.youtube.com/embed/iY3KWaR4iig?controls=0"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-1/2 p-2 flex flex-col justify-center items-center lg:mt-[-5]">
-          <h2 className="text-white font-bold">Arjun Mehta</h2>
-          <p className="text-neutral-500 text-sm">@TCS Digital</p>
-          <p className="text-neutral-400 text-xs leading-relaxed mt-2">
-            AI proctoring made practice feel real. Improved my performance significantly in interviews.
-          </p>
-        </div>
-      </div>
-
-
-      
-
-      
-      
-
-      
-
-      
-
-      
-
-    </div>
-  </div>
-
-  <div className="flex justify-between mt-6 px-2 md:hidden">
-    <button className="p-3 bg-neutral-900/50 hover:bg-[#d97757]/20 border border-neutral-700 rounded-full text-neutral-400 hover:text-[#d97757] transition-all duration-300 shadow-lg">
-      <MdKeyboardDoubleArrowLeft size={20} />
-    </button>
-    <button className="p-3 bg-neutral-900/50 hover:bg-[#d97757]/20 border border-neutral-700 rounded-full text-neutral-400 hover:text-[#d97757] transition-all duration-300 shadow-lg">
-      <RiArrowRightDoubleLine size={20} />
-    </button>
+  <div className="flex flex-row gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth px-2" style={{scrollbarWidth:'none'}}>
+    {[
+      {
+        name: "Shivam Sharma",
+        role: "Google SDE-2",
+        text: "Cracked Google SDE-2 after 3 months! AI mock interviews helped me practice real scenarios.",
+        photo: "https://ik.imagekit.io/qwzhnpeqg/news%20blogy/Screenshot%202026-03-25%20011746.png?updatedAt=1775317417305",
+        thumbnail: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20122412.png?updatedAt=1782543288732"
+      },
+      {
+        name: "Priya Singh",
+        role: "Microsoft SDE-1",
+        text: "MockRound.AI's mentorship program was game-changing. Got my dream job at Microsoft!",
+        photo: "https://ik.imagekit.io/qwzhnpeqg/news%20blogy/Screenshot%202026-03-25%20011746.png?updatedAt=1775317417305",
+        thumbnail: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20122327.png?updatedAt=1782543288581"
+      },
+      {
+        name: "Rahul Gupta",
+        role: "Amazon SDE-3",
+        text: "Test templates saved me weeks of prep time. Cleared Amazon's coding rounds easily.",
+        photo: "https://ik.imagekit.io/qwzhnpeqg/news%20blogy/Screenshot%202026-03-25%20011746.png?updatedAt=1775317417305",
+        thumbnail: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20122312.png?updatedAt=1782543288586"
+      },
+      {
+        name: "Anita Patel",
+        role: "Meta Frontend",
+        text: "Interview challenges boosted my confidence. Now working at Meta as Frontend Engineer!",
+        photo: "https://ik.imagekit.io/qwzhnpeqg/news%20blogy/Screenshot%202026-03-25%20011746.png?updatedAt=1775317417305",
+        thumbnail: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20122241.png?updatedAt=1782543288500"
+      }
+    ].map((item, i) => (
+      <ResultCard key={i} item={item} />
+    ))}
   </div>
 </div>
+      
+
 
 
 
@@ -950,22 +897,21 @@ function page() {
       Trusted by engineers at the world's leading companies who use MockRound.AI to ace their interviews
     </motion.p>
 
-    <div className="border border-neutral-500 p-6  flex justify-center lg:p-8 rounded-xl = backdrop-blur-sm">
+    <div className=" p-6  flex justify-center lg:p-8 rounded-xl = backdrop-blur-sm">
       <div className="flex flex-row gap-4 lg:gap-8 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-[#d97757]/70 scrollbar-thumb-rounded scrollbar-track-neutral-900/50 snap-x snap-mandatory scroll-smooth">
         
         <motion.div 
-          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+          className="flex-none w-50 h-50  p-4    shadow-lg "
         >
           <Image
             src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/google.png?updatedAt=1767107537686"
-            width={80}
-            height={80}
+            width={300}
+            height={300}
             alt="Google"
-            className="h-full w-full object-contain filter  "
           />
         </motion.div>
         <motion.div 
-          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+          className="flex-none w-50 h-50  p-4    shadow-lg "
         >
           <Image
             src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/infosys.png?updatedAt=1767107537459"
@@ -978,7 +924,7 @@ function page() {
 
 
         <motion.div 
-          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+          className="flex-none w-50 h-50  p-4    shadow-lg "
         >
           <Image
           src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/apple.png?updatedAt=1767107537517"
@@ -991,7 +937,7 @@ function page() {
 
 
         <motion.div 
-          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+          className="flex-none w-50 h-50  p-4     shadow-lg "
         >
           <Image
           src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/uber.png?updatedAt=1767107537497"
@@ -1003,7 +949,7 @@ function page() {
         </motion.div>
 
         <motion.div 
-          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+          className="flex-none w-50 h-50 p-4   shadow-lg "
         >
           <Image
           src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/meta.png?updatedAt=1767107537454"
@@ -1015,12 +961,12 @@ function page() {
         </motion.div>
 
             <motion.div 
-          className="flex-none w-24 h-24 lg:w-28 lg:h-28 p-4  border rounded-xl   shadow-lg "
+          className="flex-none w-50 h-50 p-4   shadow-lg "
         >
           <Image
           src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/tcs.png?updatedAt=1767107537593"
-            width={80}
-            height={80}
+            width={200}
+            height={200}
             alt="Google"
             className="h-full w-full object-contain filter  "
           />

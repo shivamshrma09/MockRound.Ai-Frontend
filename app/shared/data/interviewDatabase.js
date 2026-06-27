@@ -1730,7 +1730,7 @@ export const interviewDatabase = [
   {
     id: 36,
     companyName: "Amazon",
-    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/amazone.png",
+    logoSrc: "https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20142028.png",
     roundType: "Coding Round",
     questions: 4,
     duration: "90 min",

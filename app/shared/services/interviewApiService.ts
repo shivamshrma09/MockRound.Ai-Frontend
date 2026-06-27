@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const HG_API = process.env.NEXT_PUBLIC_HUGGINGFACE_API_URL 
+const HG_API = process.env.NEXT_PUBLIC_HUGGINGFACE_API_URL || "";
 
 export interface InterviewRequest {
   company_Name: string;

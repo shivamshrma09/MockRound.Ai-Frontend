@@ -288,7 +288,7 @@ function ChallengesPage() {
             <div className="w-full max-w-md mx-auto border border-neutral-500/50 lg:h-90  bg-black rounded-lg overflow-hidden  relative shadow-lg ">
               <div className="w-full p-2 h-40 relative mb-4  ">
                 <img 
-                  src='https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20publichttps://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/amazone.png'
+                  src='https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/Screenshot%202026-06-27%20142028.png'
                   alt="logo"
                   className="w-full p-2 h-40 object-cover border border-neutral-500/50 rounded-xl"
                 />

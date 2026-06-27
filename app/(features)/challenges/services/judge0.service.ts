@@ -5,80 +5,40 @@ const RAPIDAPI_KEY = process.env.NEXT_PUBLIC_RAPIDAPI_KEY!;
 const RAPIDAPI_HOST = process.env.NEXT_PUBLIC_RAPIDAPI_HOST!;
 
 const getLanguageId = (language: string): number => {
-  const map: { [key: string]: number } = {
+  const languageMap: { [key: string]: number } = {
     'JavaScript': 63,
     'Python': 71,
     'Java': 62,
     'C++': 54,
     'C': 50,
   };
-  return map[language] || 63;
+  return languageMap[language] || 63;
 };
 
-// User ke function code ke around stdin-based runner wrap karta hai
-const wrapWithRunner = (userCode: string, language: string, fnName: string, inputData: string): string => {
-  if (language === 'JavaScript') {
-    const lines = inputData.trim().split('\n');
-    const argsCode = lines.map((line, i) => {
-      const trimmed = line.trim();
-      return `const arg${i} = JSON.parse(\`${trimmed}\`);`;
-    }).join('\n');
-    const argsList = lines.map((_, i) => `arg${i}`).join(', ');
-
-    return `${userCode}
-
-${argsCode}
-const result = ${fnName}(${argsList});
-console.log(JSON.stringify(result));
-`;
-  }
-
-  if (language === 'Python') {
-    const lines = inputData.trim().split('\n');
-    const argsCode = lines.map((line, i) => {
-      const trimmed = line.trim();
-      return `arg${i} = json.loads("""${trimmed}""")`;
-    }).join('\n');
-    const argsList = lines.map((_, i) => `arg${i}`).join(', ');
-
-    return `import json
-${userCode}
-
-${argsCode}
-result = ${fnName}(${argsList})
-print(json.dumps(result))
-`;
-  }
-
-  // Java / C++ / C — stdin se directly padhte hain, wrap nahi karna
-  return userCode;
-};
-
-const normalizeOutput = (val: string): string => {
+const toBase64 = (str: string): string => {
   try {
-    return JSON.stringify(JSON.parse(val.trim()));
+    return btoa(unescape(encodeURIComponent(str)));
   } catch {
-    return val.trim().toLowerCase();
+    return btoa(str);
   }
 };
 
-export const runCodeOnJudge0 = async (
-  code: string,
-  language: string,
-  inputData: string,
-  fnName?: string
-) => {
+const fromBase64 = (str: string): string => {
   try {
-    const sourceCode = fnName && ['JavaScript', 'Python'].includes(language)
-      ? wrapWithRunner(code, language, fnName, inputData)
-      : code;
+    return decodeURIComponent(escape(atob(str)));
+  } catch {
+    return atob(str);
+  }
+};
 
+export const runCodeOnJudge0 = async (code: string, language: string, input: string) => {
+  try {
     const response = await axios.post(
-      `${JUDGE0_API}?base64_encoded=false&wait=true`,
+      `${JUDGE0_API}?base64_encoded=true&wait=true`,
       {
-        source_code: sourceCode,
+        source_code: toBase64(code),
         language_id: getLanguageId(language),
-        stdin: inputData.trim(),
+        stdin: toBase64(input),
       },
       {
         headers: {
@@ -90,81 +50,53 @@ export const runCodeOnJudge0 = async (
       }
     );
 
-    const d = response.data;
-    const status = d.status?.description || '';
-    const stdout = d.stdout?.trim() || '';
-    const stderr = d.stderr?.trim() || '';
-    const compileErr = d.compile_output?.trim() || '';
-
-    if (status === 'Compilation Error') {
-      return { success: false, output: '', error: compileErr, status };
-    }
-    if (status.includes('Runtime') || status.includes('Error')) {
-      return { success: false, output: '', error: stderr || status, status };
-    }
-    if (status === 'Time Limit Exceeded') {
-      return { success: false, output: '', error: 'Time Limit Exceeded', status };
-    }
+    const data = response.data;
+    const stdout = data.stdout ? fromBase64(data.stdout).trim() : '';
+    const stderr = data.stderr ? fromBase64(data.stderr).trim() : '';
+    const compileError = data.compile_output ? fromBase64(data.compile_output).trim() : '';
 
     return {
-      success: true,
+      success: data.status?.id <= 3,
       output: stdout,
-      status,
-      error: stderr || compileErr || '',
-      time: d.time,
-      memory: d.memory,
+      status: data.status?.description,
+      error: stderr || compileError || '',
+      time: data.time,
+      memory: data.memory,
     };
   } catch (error: any) {
+    console.error('Judge0 error:', error);
     return {
       success: false,
       output: '',
-      error: error.response?.data?.message || error.message || 'Execution failed',
+      error: error.message || 'Execution failed',
     };
   }
-};
-
-// Function name extract karta hai code se
-const extractFunctionName = (code: string, language: string): string => {
-  let match: RegExpMatchArray | null = null;
-  if (language === 'JavaScript') {
-    match = code.match(/function\s+(\w+)\s*\(/) || code.match(/const\s+(\w+)\s*=\s*(?:function|\()/);
-  } else if (language === 'Python') {
-    match = code.match(/def\s+(\w+)\s*\(/);
-  }
-  return match ? match[1] : '';
 };
 
 export const runTestCases = async (code: string, language: string, testCases: any[]) => {
   const results = [];
-  const fnName = extractFunctionName(code, language);
 
   for (let i = 0; i < testCases.length; i++) {
     const testCase = testCases[i];
     const inputData = testCase.inputData || testCase.input;
 
     if (i > 0) {
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
     }
 
-    const result = await runCodeOnJudge0(code, language, inputData, fnName);
-
-    const output = result.output || '';
-    const expected = testCase.expected;
-    const hasError = !result.success || (!output && result.error);
-
-    const isCorrect = !hasError && normalizeOutput(output) === normalizeOutput(expected);
-    const displayOutput = hasError ? (result.error || 'No output') : output;
+    const result = await runCodeOnJudge0(code, language, inputData);
+    const output = result.output || (result.error ? `Error: ${result.error}` : 'No output');
+    const isCorrect = result.success && output.trim() === testCase.expected.trim();
 
     results.push({
       caseNumber: i + 1,
       input: testCase.input,
       inputData,
-      output: displayOutput,
-      expected,
-      status: isCorrect ? '✅ PASS' : hasError ? `❌ ${result.error}` : '❌ FAIL',
+      output,
+      expected: testCase.expected,
+      status: isCorrect ? '✅ PASS' : '❌ FAIL',
       isCorrect,
-      error: result.error || '',
-      executionStatus: result.status || '',
+      error: result.error,
     });
   }
 

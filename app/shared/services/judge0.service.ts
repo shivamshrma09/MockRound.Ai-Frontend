@@ -11,7 +11,7 @@ const getLanguageId = (language: string): number => {
     'Java': 62,
     'C++': 54,
     'C': 50,
-    'TypeScript': 63,
+    'TypeScript': 74,
     'Python3': 71,
     'C++17': 54,
     'JavaScript (Node)': 63,
@@ -20,14 +20,20 @@ const getLanguageId = (language: string): number => {
   return languageMap[language] || 63;
 };
 
-const formatInputData = (input: string): string => {
-  if (input.includes('nums = ') && input.includes('target = ')) {
-    const parts = input.split(', ');
-    const nums = parts[0].replace('nums = ', '');
-    const target = parts[1].replace('target = ', '');
-    return `${nums}\n${target}`;
+const toBase64 = (str: string): string => {
+  try {
+    return btoa(unescape(encodeURIComponent(str)));
+  } catch {
+    return btoa(str);
   }
-  return input;
+};
+
+const fromBase64 = (str: string): string => {
+  try {
+    return decodeURIComponent(escape(atob(str)));
+  } catch {
+    return atob(str);
+  }
 };
 
 export interface Judge0Result {
@@ -51,17 +57,17 @@ export interface TestCaseResult {
 }
 
 export const runCodeOnJudge0 = async (
-  code: string, 
-  language: string, 
+  code: string,
+  language: string,
   input: string = ''
 ): Promise<Judge0Result> => {
   try {
     const response = await axios.post(
-      `${JUDGE0_API}?base64_encoded=false&wait=true`,
+      `${JUDGE0_API}?base64_encoded=true&wait=true`,
       {
-        source_code: code,
+        source_code: toBase64(code),
         language_id: getLanguageId(language),
-        stdin: input,
+        stdin: toBase64(input),
       },
       {
         headers: {
@@ -74,11 +80,15 @@ export const runCodeOnJudge0 = async (
     );
 
     const data = response.data;
+    const stdout = data.stdout ? fromBase64(data.stdout).trim() : '';
+    const stderr = data.stderr ? fromBase64(data.stderr).trim() : '';
+    const compileError = data.compile_output ? fromBase64(data.compile_output).trim() : '';
+
     return {
-      success: true,
-      output: data.stdout?.trim() || '',
+      success: data.status?.id <= 3,
+      output: stdout,
       status: data.status?.description,
-      error: data.stderr || data.compile_output || '',
+      error: stderr || compileError || '',
       time: data.time,
       memory: data.memory,
     };
@@ -87,30 +97,29 @@ export const runCodeOnJudge0 = async (
     return {
       success: false,
       output: '',
-      error: error.response?.data?.message || error.message || 'Execution failed',
+      error: error.response?.data?.error || error.message || 'Execution failed',
     };
   }
 };
 
 export const runTestCases = async (
-  code: string, 
-  language: string, 
-  testCases: Array<{ input: string; expected: string }>
+  code: string,
+  language: string,
+  testCases: Array<{ input: string; expected: string; inputData?: string }>
 ): Promise<TestCaseResult[]> => {
   const results: TestCaseResult[] = [];
 
   for (let i = 0; i < testCases.length; i++) {
     const testCase = testCases[i];
-    const inputData = formatInputData(testCase.input);
-    
-    // Rate limiting (1 sec delay after first case)
+    const inputData = testCase.inputData || testCase.input;
+
     if (i > 0) {
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
     const result = await runCodeOnJudge0(code, language, inputData);
-    const output = result.output || result.error || 'No output';
-    const isCorrect = output.trim() === testCase.expected.trim();
+    const output = result.output || (result.error ? `Error: ${result.error}` : 'No output');
+    const isCorrect = result.success && output.trim() === testCase.expected.trim();
 
     results.push({
       caseNumber: i + 1,
@@ -125,20 +134,4 @@ export const runTestCases = async (
   }
 
   return results;
-};
-
-// Bonus: Get all supported languages
-export const getSupportedLanguages = async () => {
-  try {
-    const response = await axios.get(`${JUDGE0_API.replace('/submissions', '/languages')}?base64_encoded=false`, {
-      headers: {
-        'x-rapidapi-key': RAPIDAPI_KEY,
-        'x-rapidapi-host': RAPIDAPI_HOST,
-      },
-    });
-    return response.data.data;
-  } catch (error) {
-    console.error('Languages fetch error:', error);
-    return [];
-  }
 };

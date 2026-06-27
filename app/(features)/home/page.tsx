@@ -72,50 +72,68 @@ function HomePage() {
       <AppSidebar />
       <main className="flex-1 bg-black min-h-screen">
         <div className='bg-black border-b border-gray-800 px-6 lg:ml-60 py-4 sticky top-0 z-30'>
-          <div className='flex items-center gap-2'>
-            <div className="bg-black">
-              <SidebarTrigger className="text-white" />
+          <div className='flex items-center justify-between gap-4 w-full'>
+            <div className='flex items-center gap-2'>
+              <SidebarTrigger className="text-white hover:bg-neutral-800" />
+              <Link href='/home'>
+                <Image
+                  src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
+                  alt="MockRound.AI Logo"
+                  width={120}
+                  height={32}
+                  loading="eager"
+                  className="object-contain w-30 lg:hidden"
+                />
+              </Link>
             </div>
 
-
-            <Link href='/home'>
-              <Image
-                src="https://ik.imagekit.io/qwzhnpeqg/mockround.ai%20imges%20public/logo2.png"
-                alt="MockRound.AI Logo"
-                width={10}
-                height={10}
-                loading="eager"
-                className="object-contain    w-30 lg:hidden"
-              />
-            </Link>
-
-            <div className='relative flex-1 max-w-lg lg:ml-110'>
-              <CiSearch className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl' />
+            {/* Modern Search Bar */}
+            <div className='relative flex-1 max-w-md mx-auto group hidden md:block'>
+              <CiSearch className='absolute left-3.5 top-1/2 transform -translate-y-1/2 text-neutral-500 text-lg transition-colors group-focus-within:text-[#d97757]' />
               <input
                 type='text'
-                placeholder='Search by round or company name'
+                placeholder='Search by round or company name...'
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className='w-full bg-black border border-neutral-500/50 rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-orange-500/40'
+                className='w-full bg-neutral-900/60 border border-neutral-800 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-[#d97757]/30 focus:border-[#d97757] transition-all duration-300 backdrop-blur-md'
               />
             </div>
 
-            <div className='text-white p-2  rounded-lg cursor-pointer'>
-              <FaUser className='text-xl' />
-            </div>
+            {/* Right Actions */}
+            <div className='flex items-center gap-3'>
+              {/* User icon */}
+              <div className='text-neutral-400 hover:text-white p-2 rounded-lg cursor-pointer transition-colors'>
+                <FaUser className='text-lg' />
+              </div>
 
-            <div onClick={() => setShowfeedback(!showfeedback)}  className='text-white hover:scale-105 flex flex-row shadow-xl bg-black border-1 py-2 px-3 border-white   rounded-lg cursor-pointer  items-center gap-3'>
-                            <h3 className='text-base font-bold hidden lg:block'>Feedback</h3>
-              <VscFeedback className='text-xl text-[#9e563e]' />
+              {/* Feedback Button */}
+              <button 
+                onClick={() => setShowfeedback(!showfeedback)}  
+                className='text-white hover:scale-[1.02] hover:border-[#d97757]/80 hover:text-[#d97757] flex flex-row shadow-lg bg-neutral-900/60 border border-neutral-800 py-2 px-4 rounded-xl cursor-pointer items-center gap-2 transition-all duration-300 backdrop-blur-md'
+              >
+                <span className='text-sm font-semibold hidden lg:block'>Feedback</span>
+                <VscFeedback className='text-lg text-[#d97757]' />
+              </button>
             </div>
+          </div>
+
+          {/* Mobile Search Bar */}
+          <div className='relative w-full group mt-3 md:hidden'>
+            <CiSearch className='absolute left-3.5 top-1/2 transform -translate-y-1/2 text-neutral-500 text-lg transition-colors group-focus-within:text-[#d97757]' />
+            <input
+              type='text'
+              placeholder='Search by round or company...'
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className='w-full bg-neutral-900/60 border border-neutral-800 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-[#d97757]/30 focus:border-[#d97757] transition-all duration-300'
+            />
           </div>
         </div>
 
         {showfeedback && (
-          <div className='flex flex-row mt-50  bg-black items-center lg:ml-120 justify-center z-100 absolute  lg:mt-50'>
-            <Feedback />
-            </div>
-          
+          <div className='fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4'>
+            <Feedback onClose={() => setShowfeedback(false)} />
+          </div>
         )}
 
         <div className='p-6 bg-black'>
